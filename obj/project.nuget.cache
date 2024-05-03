@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EvkxQPKg9f5TWWlM9xvKl/rYUES8bZa0OzXU2y4nwDwoIrk3lHUeIrP+Llurz3G4/ktPvZTzbtJrOQBGRy2r7w==",
+  "dgSpecHash": "4yiqQx4+N5opYyFOzPXk3/5bFJbCz6dJaG45KNWw0DSJNn2FhpP4Rvtvx0lZDGv/OnNSF5Sf1Q1ReR1SyxqEIg==",
   "success": true,
-  "projectFilePath": "F:\\Universidad\\Apps moviles\\ProyectoFinal\\ProyectoFinal.csproj",
+  "projectFilePath": "F:\\Universidad\\Apps moviles\\prueba\\ProyectoFinalFront\\ProyectoFinal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wilso\\.nuget\\packages\\googlegson\\2.9.1.1\\googlegson.2.9.1.1.nupkg.sha512",
     "C:\\Users\\wilso\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",

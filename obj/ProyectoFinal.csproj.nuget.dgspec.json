@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Universidad\\Apps moviles\\ProyectoFinal\\ProyectoFinal.csproj": {}
+    "F:\\Universidad\\Apps moviles\\prueba\\ProyectoFinalFront\\ProyectoFinal.csproj": {}
   },
   "projects": {
-    "F:\\Universidad\\Apps moviles\\ProyectoFinal\\ProyectoFinal.csproj": {
+    "F:\\Universidad\\Apps moviles\\prueba\\ProyectoFinalFront\\ProyectoFinal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Universidad\\Apps moviles\\ProyectoFinal\\ProyectoFinal.csproj",
+        "projectUniqueName": "F:\\Universidad\\Apps moviles\\prueba\\ProyectoFinalFront\\ProyectoFinal.csproj",
         "projectName": "ProyectoFinal",
-        "projectPath": "F:\\Universidad\\Apps moviles\\ProyectoFinal\\ProyectoFinal.csproj",
+        "projectPath": "F:\\Universidad\\Apps moviles\\prueba\\ProyectoFinalFront\\ProyectoFinal.csproj",
         "packagesPath": "C:\\Users\\wilso\\.nuget\\packages\\",
-        "outputPath": "F:\\Universidad\\Apps moviles\\ProyectoFinal\\obj\\",
+        "outputPath": "F:\\Universidad\\Apps moviles\\prueba\\ProyectoFinalFront\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
