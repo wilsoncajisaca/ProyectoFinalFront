@@ -56,6 +56,11 @@
 	  <MauiXaml Update="Vistas\VLogin.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Vistas\vReporteSiniestro.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
+
+	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionProyectoFinalHideInfoBar="True" /></VisualStudio></ProjectExtensions>
 
 </Project>
