@@ -1,1 +1,1 @@
-F:\Universidad\Apps moviles\prueba\ProyectoFinalFront\ProyectoFinal.csproj;x64
+C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\ProyectoFinal.csproj;x64

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoFinal.Vistas.vReporteSiniestro"
+             Title="vReporteSiniestro">
+    <StackLayout>
+
+    <Grid RowDefinitions="150,.9*">
+        <Image Aspect="AspectFill" Source="siniestro.png"/>
+        <Grid BackgroundColor="#4F3F9B" Opacity=".9"/>
+        
+        <Grid ColumnDefinitions="150">
+            <Label Text="REPORTE DE SINIESTRO" 
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    TextColor="White"
+                    HorizontalTextAlignment="Center"
+                    FontSize="20"/>
+        </Grid>
+   
+    </Grid>
+
+        <Frame
+            Padding="50"
+            BorderColor="White">
+            <Frame Padding="50"
+            WidthRequest="200" 
+            HeightRequest="180"
+            CornerRadius="10"
+            HasShadow="True"
+            BorderColor="Black"
+            BackgroundColor="#EDEDED">
+                <ImageButton Source="camara.png"
+                         x:Name="btn_camara"
+                     WidthRequest="80"
+                     HeightRequest="80"
+                     Aspect="AspectFit"
+                     Clicked="btn_camra_Clicked"/>
+                
+            </Frame>
+            
+        </Frame>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Label x:Name="lbl_foto"
+                    Text="AGREGAR UBICACIÓN"
+                    Grid.Row="0"
+                    HorizontalTextAlignment="Center"/>
+            <Entry Grid.Row="1"
+                   x:Name="txtUbi"
+                   Placeholder="0'0'0'0'"
+                   Margin="70,0,70,0"
+                    HorizontalTextAlignment="Center"
+                   IsReadOnly="True"/>
+
+        </Grid>
+        <Grid  Padding="20">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="TIPO:"
+        TextColor="Black"    
+        Grid.Row="0"
+        Grid.Column="0"
+        HorizontalTextAlignment="Start"/>
+
+            <Picker Grid.Column="1"
+         Grid.Row="0"
+         x:Name="pkTipo"  >
+                <Picker.Items  >
+                    <x:String>Accidente de Tránsito</x:String>
+                    <x:String>Agua</x:String>
+                    <x:String>Luz</x:String>
+                    <x:String>Infraestructura Municipal</x:String>
+                </Picker.Items>
+                <Picker.Title>
+                    <x:String>Accidente de Tránsito</x:String>
+                </Picker.Title>
+            </Picker>
+
+        
+        <Label x:Name="lbl_observa"
+               Text="OBSERVACION:"
+               Grid.Row="1"
+               Grid.Column="0"
+               HorizontalTextAlignment="Start"/>
+
+        </Grid>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Frame BorderColor="Black"  Margin="10,0,10,0">
+            <Entry Grid.Row="0"
+              x:Name="txtObservacion"
+                   Margin="0,0,0,0"
+                Placeholder="Escriba aqui"/>
+        </Frame>
+
+        <Button x:Name="btnSiniestro"
+                Text="REPORTAR SINIESTRO"
+                Grid.Row="1"
+                Margin="30,40,30,0"
+                Clicked="btnSiniestro_Clicked"/>
+
+        </Grid>
+
+    </StackLayout>
+
+
+   
+</ContentPage>
