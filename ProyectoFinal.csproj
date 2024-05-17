@@ -56,6 +56,9 @@
 	  <MauiXaml Update="Vistas\VLogin.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Vistas\vReporteCliente.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Vistas\vReporteSiniestro.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
