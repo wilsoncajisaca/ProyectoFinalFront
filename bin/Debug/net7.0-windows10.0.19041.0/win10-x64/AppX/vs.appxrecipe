@@ -30,29 +30,29 @@
     <AppXManifest Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-05-05T18:10:05.038</Modified>
+      <Modified>2024-05-20T05:08:46.101</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-05-05T18:10:03.591</Modified>
+      <Modified>2024-05-20T05:06:11.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\ProyectoFinal.runtimeconfig.json">
       <PackagePath>ProyectoFinal.runtimeconfig.json</PackagePath>
-      <Modified>2024-05-05T18:10:02.863</Modified>
+      <Modified>2024-05-20T05:02:46.182</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\ProyectoFinal.dll">
       <PackagePath>ProyectoFinal.dll</PackagePath>
-      <Modified>2024-05-05T18:09:58.103</Modified>
+      <Modified>2024-05-20T05:08:45.025</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>ProyectoFinal.exe</PackagePath>
-      <Modified>2024-05-05T18:09:58.250</Modified>
+      <Modified>2024-05-20T05:08:45.097</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\ProyectoFinal.deps.json">
       <PackagePath>ProyectoFinal.deps.json</PackagePath>
-      <Modified>2024-05-05T18:10:02.381</Modified>
+      <Modified>2024-05-20T05:02:46.173</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pona\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.18\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -937,6 +937,254 @@
     <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
       <Modified>2024-05-03T03:10:21.680</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
+      <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
+      <Modified>2024-05-20T04:57:56.617</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
+      <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
+      <Modified>2024-05-20T04:57:56.635</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
+      <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
+      <Modified>2024-05-20T04:57:56.657</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
+      <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
+      <Modified>2024-05-20T04:57:56.689</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
+      <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
+      <Modified>2024-05-20T04:57:56.823</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
+      <PackagePath>OpenSans-Regular.ttf</PackagePath>
+      <Modified>2024-05-03T03:10:21.675</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
+      <PackagePath>OpenSans-Semibold.ttf</PackagePath>
+      <Modified>2024-05-03T03:10:21.678</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
+      <PackagePath>appicon.ico</PackagePath>
+      <Modified>2024-05-20T04:57:56.878</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
+      <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.215</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
+      <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.235</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
+      <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.255</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
+      <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.278</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
+      <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.349</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
+      <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
+      <Modified>2024-05-20T04:57:56.995</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
+      <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
+      <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.019</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
+      <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.005</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
+      <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.010</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
+      <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
+      <Modified>2024-05-20T04:57:56.960</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
+      <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
+      <Modified>2024-05-20T04:57:56.965</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
+      <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
+      <Modified>2024-05-20T04:57:56.988</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
+      <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
+      <Modified>2024-05-20T04:57:56.971</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
+      <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
+      <Modified>2024-05-20T04:57:56.977</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
+      <PackagePath>appiconLogo.scale-100.png</PackagePath>
+      <Modified>2024-05-20T04:57:56.895</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
+      <PackagePath>appiconLogo.scale-125.png</PackagePath>
+      <Modified>2024-05-20T04:57:56.900</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
+      <PackagePath>appiconLogo.scale-150.png</PackagePath>
+      <Modified>2024-05-20T04:57:56.907</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
+      <PackagePath>appiconLogo.scale-200.png</PackagePath>
+      <Modified>2024-05-20T04:57:56.917</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
+      <PackagePath>appiconLogo.scale-400.png</PackagePath>
+      <Modified>2024-05-20T04:57:56.924</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
+      <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
+      <Modified>2024-05-20T04:57:56.929</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
+      <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
+      <Modified>2024-05-20T04:57:56.935</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
+      <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
+      <Modified>2024-05-20T04:57:56.956</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
+      <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
+      <Modified>2024-05-20T04:57:56.941</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
+      <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
+      <Modified>2024-05-20T04:57:56.946</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
+      <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.095</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
+      <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.101</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
+      <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.107</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
+      <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.116</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
+      <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.131</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
+      <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.063</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
+      <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.071</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
+      <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.077</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
+      <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.082</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
+      <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.090</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
+      <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.024</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
+      <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.029</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
+      <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.034</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
+      <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.043</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
+      <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.052</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
+      <PackagePath>appiconWideTile.scale-100.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.138</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
+      <PackagePath>appiconWideTile.scale-125.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.146</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
+      <PackagePath>appiconWideTile.scale-150.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.155</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
+      <PackagePath>appiconWideTile.scale-200.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.168</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
+      <PackagePath>appiconWideTile.scale-400.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.203</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\camara.scale-100.png">
+      <PackagePath>camara.scale-100.png</PackagePath>
+      <Modified>2024-05-17T01:48:13.634</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\camaraP.scale-100.png">
+      <PackagePath>camaraP.scale-100.png</PackagePath>
+      <Modified>2024-05-17T01:48:13.635</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\comunidad.scale-100.png">
+      <PackagePath>comunidad.scale-100.png</PackagePath>
+      <Modified>2024-05-17T01:48:13.638</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
+      <PackagePath>dotnet_bot.scale-100.png</PackagePath>
+      <Modified>2024-05-20T04:57:56.926</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
+      <PackagePath>dotnet_bot.scale-125.png</PackagePath>
+      <Modified>2024-05-20T04:57:56.940</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
+      <PackagePath>dotnet_bot.scale-150.png</PackagePath>
+      <Modified>2024-05-20T04:57:56.961</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
+      <PackagePath>dotnet_bot.scale-200.png</PackagePath>
+      <Modified>2024-05-20T04:57:56.984</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
+      <PackagePath>dotnet_bot.scale-400.png</PackagePath>
+      <Modified>2024-05-20T04:57:57.054</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\PERSONAL\UISRAEL\APP_MOVIL\ProyectoFinalFront\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\siniestro.scale-100.png">
+      <PackagePath>siniestro.scale-100.png</PackagePath>
+      <Modified>2024-05-17T01:48:13.640</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

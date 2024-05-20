@@ -13,6 +13,9 @@ namespace ProyectoFinal
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("Lato-Bold.ttf", "bold");
+                    fonts.AddFont("Lato-Regular.ttf", "medium");
+                    fonts.AddFont("FontAwesomeSolid.otf", "AwesomeSolid");
                 });
 
 #if DEBUG
