@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoFinal.Vistas.vMenu"
+             Title="vMenu">
+
+
+    <StackLayout>
+
+        <Grid RowDefinitions="150,.9*">
+            <Image Aspect="AspectFill" Source="siniestro.png"/>
+            <Grid BackgroundColor="#4F3F9B" Opacity=".9"/>
+
+            <Grid ColumnDefinitions="150">
+                <Label Text="LA APP MAS CERCA DE TI" 
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    TextColor="White"
+                    HorizontalTextAlignment="Center"
+                    FontSize="20"/>
+            </Grid>
+
+        </Grid>
+        <Frame
+            Padding="50"
+            BorderColor="White">
+            <Frame Padding="200"
+            WidthRequest="200" 
+            HeightRequest="180"
+            CornerRadius="10"
+            HasShadow="True"
+            BorderColor="Black"
+            BackgroundColor="#EDEDED">
+                <ImageButton Source="reportar.png"
+                         x:Name="btn_reportar"
+                     WidthRequest="100"
+                     HeightRequest="100"
+                     Aspect="AspectFit"
+                     Clicked="btn_reportar_Clicked"/>
+            
+            </Frame>
+
+        </Frame>
+        <Label x:Name="lbl_reportar"
+                Text="REPORTAR SINIESTRO"
+               HorizontalTextAlignment="Center"/>
+
+        <Frame
+            Padding="50"
+            BorderColor="White">
+            <Frame Padding="50"
+            WidthRequest="200" 
+            HeightRequest="180"
+            CornerRadius="10"
+            HasShadow="True"
+            BorderColor="Black"
+            BackgroundColor="#EDEDED">
+                <ImageButton Source="historial.png"
+                         x:Name="btn_historial"
+                     WidthRequest="80"
+                     HeightRequest="80"
+                     Aspect="AspectFit"
+                     Clicked="btn_historial_Clicked"/>
+
+            </Frame>
+            
+            
+        </Frame>
+
+        <Label x:Name="lbl_historial"
+               Text="VER MIS REPORTES"
+               HorizontalTextAlignment="Center"/>
+
+    </StackLayout>
+
+</ContentPage>
