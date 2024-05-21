@@ -49,6 +49,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\candado.png" />
+	  <None Remove="Resources\Images\correo.png" />
+	  <None Remove="Resources\Images\identificacion.png" />
+	  <None Remove="Resources\Images\usuario.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>
