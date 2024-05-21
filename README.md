@@ -1,3 +1,6 @@
+URL PARA ACCEDER A LOS SERVICIOS WEB.
+https://96a0-190-123-34-107.ngrok-free.app
+
 TIPO PETICION: "POST"
 *REGISTRO DE UN USUARIO*
 /appMovilesFinal/api/partner/create
