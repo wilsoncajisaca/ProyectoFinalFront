@@ -43,7 +43,7 @@ public partial class VLogin : ContentPage
 
     private async Task<Dictionary<string, object>> LoginAsync(string username, string password)
     {
-        var url = "http://127.0.0.1:8090/appMovilesFinal/api/auth/login";
+        var url = "https://96a0-190-123-34-107.ngrok-free.app/appMovilesFinal/api/auth/login";
         var loginData = new { username = username, password = password };
         var json = JsonConvert.SerializeObject(loginData);
         var content = new StringContent(json, Encoding.UTF8, "application/json");
