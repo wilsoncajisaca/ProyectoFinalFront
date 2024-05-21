@@ -8,7 +8,9 @@ namespace ProyectoFinal
         public App()
         {
             InitializeComponent();
-            MainPage = new vReporteCliente();
+
+
+            MainPage = new VLogin();
         }
     }
 }
