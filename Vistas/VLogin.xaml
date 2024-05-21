@@ -53,13 +53,13 @@
                     </Image>
 
                     <Entry Grid.Column="1"
-                           Placeholder="EMAIL"
-                           Text="paolaona@gmail.com"
+                           x:Name="txtUser"
+                           Placeholder="USUARIO"
                            VerticalOptions="Center"/>
 
                 </Grid>
 
-                    <!--password-->
+                <!--password-->
                 <Grid Margin="0,30,0,0" ColumnDefinitions=".2*,.8*">
                     <RoundRectangle
                         BackgroundColor="#EDEBF6"
@@ -79,40 +79,32 @@
 
                     <Entry Grid.Column="1"
                            IsPassword="True"
-                       Text="12345"
-                       VerticalOptions="Center"/>   
-
+                           x:Name="txtPass"
+                           VerticalOptions="Center"/>
                 </Grid>
 
-                  <Button
+                <Button
+                      x:Name="btnLogin"
+                      Clicked="btnLogin_Clicked"
                       Margin="0,20,0,0"
                       BackgroundColor="#4F3F9B"
                       HeightRequest="60"
                       Text="LOGIN"
                       TextColor="#fbf6fd"/>
 
-                 <Label 
+                <Label x:Name="btnInfo"
                            Margin=" 0,20,0,-10"
                            HorizontalOptions="Center"
-                           Text="Olvido contraseña"
-                           TextColor="Blue"
-                            TextDecorations="Underline"/>
+                           Text="¿Tienes problemas de acceso?"
+                           TextColor="Red"
+                           TextDecorations="Underline"/>
                 <Button
                      Margin="0,30,0,0"
                      BackgroundColor="#fbf6fd"
                      HeightRequest="60"
                      Text="Crear usuario"
                      TextColor="#4f3f9b" />
-
-
-
             </VerticalStackLayout>
-            
-            
-            
         </Grid>
-        
-        
     </StackLayout>
-
 </ContentPage>
