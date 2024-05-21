@@ -10,7 +10,7 @@ namespace ProyectoFinal
             InitializeComponent();
 
 
-            MainPage = new vRegistro();
+            MainPage = new NavigationPage(new VLogin());
         }
     }
 }

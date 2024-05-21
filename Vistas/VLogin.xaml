@@ -79,26 +79,41 @@
 
                     <Entry Grid.Column="1"
                            IsPassword="True"
+                           Placeholder="CONTRASEÑA"
                            x:Name="txtPass"
                            VerticalOptions="Center"/>
                 </Grid>
 
-                <Button
-                      x:Name="btnLogin"
-                      Clicked="btnLogin_Clicked"
-                      Margin="0,20,0,0"
-                      BackgroundColor="#4F3F9B"
-                      HeightRequest="60"
-                      Text="LOGIN"
-                      TextColor="#fbf6fd"/>
+                <Grid>
+                    <Button x:Name="btnLogin"
+                                Text="LOGIN"
+                                BackgroundColor="#4F3F9B"
+                                TextColor="White"
+                                HeightRequest="60"
+                                Clicked="btnLogin_Clicked"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="CenterAndExpand"/>
+                    <ActivityIndicator x:Name="activityIndicator"
+                                           IsVisible="False"
+                                           IsRunning="False"
+                                           Color="#4F3F9B"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"/>
+                </Grid>
 
                 <Label x:Name="btnInfo"
                            Margin=" 0,20,0,-10"
                            HorizontalOptions="Center"
                            Text="¿Tienes problemas de acceso?"
                            TextColor="Red"
-                           TextDecorations="Underline"/>
+                           TextDecorations="Underline">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="btnInfo_Clicked" />
+                    </Label.GestureRecognizers>
+                </Label>
                 <Button
+                    x:Name="btnRegister"
+                    Clicked="btnRegister_Clicked"
                      Margin="0,30,0,0"
                      BackgroundColor="#fbf6fd"
                      HeightRequest="60"
