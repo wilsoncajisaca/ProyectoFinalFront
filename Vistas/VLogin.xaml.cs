@@ -14,11 +14,16 @@ public partial class VLogin : ContentPage
 
     private async void btnLogin_Clicked(object sender, EventArgs e)
     {
+        btnLogin.IsVisible = false;
+        activityIndicator.IsVisible = true;
+        activityIndicator.IsRunning = true;
         var username = txtUser.Text;
         var password = txtPass.Text;
 
         var result = await LoginAsync(username, password);
-
+        activityIndicator.IsVisible = false;
+        activityIndicator.IsRunning = false;
+        btnLogin.IsVisible = true;
         if ((bool)result["IsSuccess"])
         {
             // Manejar la respuesta exitosa aquí
@@ -78,5 +83,20 @@ public partial class VLogin : ContentPage
         }
 
         return result;
+    }
+
+    private void btnRegister_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new vRegistro());
+    }
+
+    private void btnInfo_Clicked(object sender, EventArgs e)
+    {
+        DisplayAlert("Alerta", "Lamentamos que tengas problemas para iniciar sección, para poder ayudarte ponte en contacto con el administrador \n admin@proyectofinal.com", "Cerrar");
+    }
+
+    private void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
+    {
+
     }
 }

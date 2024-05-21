@@ -36,21 +36,18 @@
                     Text="Log in to continue"
                     TextColor="#A3A3A4"/>
                 <Grid Margin="0,30,0,0" ColumnDefinitions=".2*,.8*">
-                    <RoundRectangle
-                        BackgroundColor="#EDEBF6"
-                        CornerRadius="10"
-                        HeightRequest="60"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                        WidthRequest="60"/>
-                    <Image HorizontalOptions="Center">
-                        <Image.Source>
-                            FontFamily="AwesomeSolid"
-                            Glyph="&#xf0e0;"
-                            Size="44"
-                            Color="#4F3F9b" />
-                        </Image.Source>
-                    </Image>
+                    <Border Stroke="#EDEBF6"
+                            Background="#EDEBF6"
+                            StrokeShape="RoundRectangle 10"
+                            HeightRequest="60"
+                            WidthRequest="60"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center">
+                        <Image Source="Resources/Images/usuario.png"
+                               Aspect="AspectFill"
+                               HeightRequest="45"
+                               WidthRequest="45"/>
+                    </Border>
 
                     <Entry Grid.Column="1"
                            x:Name="txtUser"
@@ -61,44 +58,58 @@
 
                 <!--password-->
                 <Grid Margin="0,30,0,0" ColumnDefinitions=".2*,.8*">
-                    <RoundRectangle
-                        BackgroundColor="#EDEBF6"
-                        CornerRadius="10"
-                        HeightRequest="60"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                        WidthRequest="60"/>
-                    <Image HorizontalOptions="Center">
-                        <Image.Source>
-                            FontFamily="AwesomeSolid"
-                            Glyph="&#xf084;"
-                            Size="44"
-                            Color="#4F3F9b" />
-                        </Image.Source>
-                    </Image>
+                    <Border Stroke="#EDEBF6"
+                            Background="#EDEBF6"
+                            StrokeShape="RoundRectangle 10"
+                            HeightRequest="60"
+                            WidthRequest="60"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center">
+                        <Image Source="Resources/Images/candado.png"
+                               Aspect="AspectFill"
+                               HeightRequest="45"
+                               WidthRequest="45"/>
+                    </Border>
 
-                    <Entry Grid.Column="1"
+                        <Entry Grid.Column="1"
                            IsPassword="True"
+                           Placeholder="CONTRASEÑA"
                            x:Name="txtPass"
                            VerticalOptions="Center"/>
                 </Grid>
 
-                <Button
-                      x:Name="btnLogin"
-                      Clicked="btnLogin_Clicked"
-                      Margin="0,20,0,0"
-                      BackgroundColor="#4F3F9B"
-                      HeightRequest="60"
-                      Text="LOGIN"
-                      TextColor="#fbf6fd"/>
+                <Label></Label>
+                
+                <Grid>
+                    <Button x:Name="btnLogin"
+                                Text="LOGIN"
+                                BackgroundColor="#4F3F9B"
+                                TextColor="White"
+                                HeightRequest="60"
+                                Clicked="btnLogin_Clicked"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="CenterAndExpand"/>
+                    <ActivityIndicator x:Name="activityIndicator"
+                                           IsVisible="False"
+                                           IsRunning="False"
+                                           Color="#4F3F9B"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"/>
+                </Grid>
 
                 <Label x:Name="btnInfo"
                            Margin=" 0,20,0,-10"
                            HorizontalOptions="Center"
                            Text="¿Tienes problemas de acceso?"
                            TextColor="Red"
-                           TextDecorations="Underline"/>
+                           TextDecorations="Underline">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="btnInfo_Clicked" />
+                    </Label.GestureRecognizers>
+                </Label>
                 <Button
+                    x:Name="btnRegister"
+                    Clicked="btnRegister_Clicked"
                      Margin="0,30,0,0"
                      BackgroundColor="#fbf6fd"
                      HeightRequest="60"
