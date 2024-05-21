@@ -115,6 +115,21 @@
                      HeightRequest="60"
                      Text="Crear usuario"
                      TextColor="#4f3f9b" />
+
+                <Label x:Name="ubicacion"
+                       Text="Coordinates will be displayed here"
+                       FontSize="20"
+                       TextColor="Black"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Button Text="Get Location"
+                        Clicked="Button_Clicked"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand" />
             </VerticalStackLayout>
         </Grid>
     </StackLayout>
