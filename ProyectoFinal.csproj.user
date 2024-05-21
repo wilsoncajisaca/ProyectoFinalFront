@@ -38,6 +38,9 @@
     <MauiXaml Update="Vistas\vMenu.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Vistas\vRegistro.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Vistas\vReporteSiniestro.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

@@ -63,6 +63,9 @@
 	  <MauiXaml Update="Vistas\vMenu.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Vistas\vRegistro.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Vistas\vReporteSiniestro.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
