@@ -39,8 +39,8 @@ Nota: La imagen debe ser convertida a base64 y se debe enviar tambien la extenci
 
 TIPO PETICION: "GET"
 *OBTENER LA INFORMACION DE UN SINIESTRO EN ESPECIFICO* Se debe adjuntar el id del siniestro.
-/appMovilesFinal/api/sinister/getSinister
-sinisterId: ""
+/appMovilesFinal/api/sinister/getSinister?sinisterId=XXX
+Remplazar "XXX" por el valor id del siniestro.
 
 TIPO PETICION: "GET"
 *OBTIENE TODOS LOS SINIESTROS DEL USUARIO LOGEADO*
