@@ -1,0 +1,71 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net7.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ProyectoFinal
+build_property.ProjectDir = C:\DesarrolloAPP\ProyectoFinalFront\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[C:/DesarrolloAPP/ProyectoFinalFront/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoFinal.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/DesarrolloAPP/ProyectoFinalFront/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoFinal.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/DesarrolloAPP/ProyectoFinalFront/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoFinal.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/DesarrolloAPP/ProyectoFinalFront/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoFinal.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/DesarrolloAPP/ProyectoFinalFront/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoFinal.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/DesarrolloAPP/ProyectoFinalFront/Vistas/vDetalleReporte.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoFinal.Vistas.vDetalleReporte.xaml
+build_metadata.AdditionalFiles.TargetPath = Vistas\vDetalleReporte.xaml
+build_metadata.AdditionalFiles.RelativePath = Vistas\vDetalleReporte.xaml
+
+[C:/DesarrolloAPP/ProyectoFinalFront/Vistas/VLogin.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoFinal.Vistas.VLogin.xaml
+build_metadata.AdditionalFiles.TargetPath = Vistas\VLogin.xaml
+build_metadata.AdditionalFiles.RelativePath = Vistas\VLogin.xaml
+
+[C:/DesarrolloAPP/ProyectoFinalFront/Vistas/vReporteCliente.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoFinal.Vistas.vReporteCliente.xaml
+build_metadata.AdditionalFiles.TargetPath = Vistas\vReporteCliente.xaml
+build_metadata.AdditionalFiles.RelativePath = Vistas\vReporteCliente.xaml
+
+[C:/DesarrolloAPP/ProyectoFinalFront/Vistas/vReporteSiniestro.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = ProyectoFinal.Vistas.vReporteSiniestro.xaml
+build_metadata.AdditionalFiles.TargetPath = Vistas\vReporteSiniestro.xaml
+build_metadata.AdditionalFiles.RelativePath = Vistas\vReporteSiniestro.xaml

@@ -8,7 +8,7 @@ namespace ProyectoFinal
         public App()
         {
             InitializeComponent();
-            MainPage = new vReporteSiniestro();
+            MainPage = new vReporteCliente();
         }
     }
 }
