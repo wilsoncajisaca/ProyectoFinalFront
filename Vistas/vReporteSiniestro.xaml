@@ -105,13 +105,28 @@
                 Placeholder="Escriba aqui"/>
         </Frame>
 
-        <Button x:Name="btnSiniestro"
-                Text="REPORTAR SINIESTRO"
-                Grid.Row="1"
-                Margin="30,40,30,0"
-                Clicked="btnSiniestro_Clicked"/>
+                <Grid  Grid.Row="1" 
+                       Margin="30,10,30,0">
+                    <Button x:Name="btnSiniestro"
+                            Text="REPORTAR SINIESTRO"
+                            BackgroundColor="#4F3F9B"
+                            TextColor="White"
+                            HeightRequest="60"
+                            Clicked="btnSiniestro_Clicked"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="CenterAndExpand"/>
+                    <ActivityIndicator x:Name="activityIndicator"
+                                       IsVisible="False"
+                                       IsRunning="False"
+                                       Color="#4F3F9B"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
+                </Grid>
 
-        </Grid>
+
+
+
+            </Grid>
 
     </StackLayout>
 

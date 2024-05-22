@@ -211,6 +211,8 @@ public partial class vReporteSiniestro : ContentPage
     {
         if (photo != null && latitud.HasValue && longitud.HasValue)
         {
+            activityIndicator.IsVisible = true;
+            activityIndicator.IsRunning = true;
             // Obtén la extensión del archivo
             string extension = Path.GetExtension(photo.FileName);
 
@@ -233,7 +235,7 @@ public partial class vReporteSiniestro : ContentPage
 
                     var selectedSinisterType = (TipoSiniestro)pkTipo.SelectedItem;
 
-                    if (!string.IsNullOrWhiteSpace(txtObservacion.Text)) 
+                    if (string.IsNullOrWhiteSpace(txtObservacion.Text)) 
                         {
                         await DisplayAlert("Alerta", "Ingrese la observación", "OK");
                         return;
@@ -250,11 +252,15 @@ public partial class vReporteSiniestro : ContentPage
                     // Verificar si la solicitud fue exitosa
                     if (response.IsSuccessStatusCode)
                     {
+                        activityIndicator.IsVisible = false;
+                        activityIndicator.IsRunning = false;
                         var responseContent = await response.Content.ReadAsStringAsync();
-                        await DisplayAlert("Éxito", responseContent, "OK");
+                        await DisplayAlert("Éxito", "Siniestro Registrado", "OK");
                     }
                     else
                     {
+                        activityIndicator.IsVisible = false;
+                        activityIndicator.IsRunning = false;
                         await DisplayAlert("Error", "No se pudo subir la imagen", "OK");
                     }
                 }

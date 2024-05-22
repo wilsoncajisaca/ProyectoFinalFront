@@ -4,7 +4,9 @@
              x:Class="ProyectoFinal.Vistas.vMenu"
              Title="Home">
 
-
+    <ScrollView>
+        
+    
     <StackLayout>
 
         <Grid RowDefinitions="150,.9*">
@@ -72,5 +74,5 @@
                HorizontalTextAlignment="Center"/>
 
     </StackLayout>
-
+    </ScrollView>
 </ContentPage>
