@@ -32,13 +32,11 @@ public partial class VLogin : ContentPage
             // Guardar el token en las preferencias
             Preferences.Set("auth_token", loginData.Token);
             Preferences.Set("auth_user", loginData.Usuario);
+            Preferences.Set("auth_rol", loginData.Rol);
 
-
-            // Recuperar el token de las preferencias
-            string userLogged = Preferences.Get("auth_user", string.Empty);
-            await DisplayAlert("Alerta", $"Usuario logeado: {userLogged}", "Cerrar");
 
             await Navigation.PushAsync(new vMenu());
+            
         }
         else
         {

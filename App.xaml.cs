@@ -8,8 +8,10 @@ namespace ProyectoFinal
         public App()
         {
             InitializeComponent();
+
             Application.Current.UserAppTheme = AppTheme.Light;
             MainPage = new NavigationPage(new VLogin());
+
         }
     }
 }

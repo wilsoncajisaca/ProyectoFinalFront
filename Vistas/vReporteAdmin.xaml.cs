@@ -9,12 +9,12 @@ using ProyectoFinal.Models;
 
 namespace ProyectoFinal.Vistas;
 
-public partial class vReporteCliente : ContentPage
+public partial class vReporteAdmin : ContentPage
 {
 
     private static readonly HttpClient client = new HttpClient();
 
-    public  vReporteCliente()
+    public vReporteAdmin()
     {
         InitializeComponent();
         InitializeAsync();
@@ -35,12 +35,12 @@ public partial class vReporteCliente : ContentPage
 
             if (string.IsNullOrEmpty(token))
             {
-                lblMessage.Text = "Token no encontrado. Por favor, inicia sesión nuevamente.";
+                lblMensaje.Text = "Token no encontrado. Por favor, inicia sesión nuevamente.";
                 // Navegar a la página de inicio de sesión u otra acción
                 return;
             }
 
-            string url = "https://96a0-190-123-34-107.ngrok-free.app/appMovilesFinal/api/sinister/getAllSinisterByPartner";
+            string url = "https://96a0-190-123-34-107.ngrok-free.app/appMovilesFinal/api/sinister/getAllSinister";
 
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             HttpResponseMessage response = await client.GetAsync(url);
@@ -53,28 +53,28 @@ public partial class vReporteCliente : ContentPage
                 if (siniestros == null || siniestros.Count == 0)
                 {
                     // Maneja el caso de lista vacía
-                    lblMessage.Text = "No se encontraron siniestros.";
+                    lblMensaje.Text = "No se encontraron siniestros.";
                 }
                 else
                 {
                     grdcabecera.IsVisible = true;
-                    lblMessage.Text = string.Empty; // Limpiar cualquier mensaje previo
+                    lblMensaje.Text = string.Empty; // Limpiar cualquier mensaje previo
                     listSiniestro.ItemsSource = siniestros;
                 }
             }
             else
             {
                 // Maneja el error de respuesta no exitosa
-                lblMessage.Text = $"No se pudo obtener la información: {response.StatusCode}";
+                lblMensaje.Text = $"No se pudo obtener la información: {response.StatusCode}";
             }
         }
         catch (HttpRequestException e)
         {
-            lblMessage.Text = $"Se produjo un error en la solicitud HTTP: {e.Message}";
+            lblMensaje.Text = $"Se produjo un error en la solicitud HTTP: {e.Message}";
         }
         catch (Exception e)
         {
-            lblMessage.Text = $"Se produjo un error: {e.Message}";
+            lblMensaje.Text = $"Se produjo un error: {e.Message}";
         }
     }
 
@@ -85,7 +85,7 @@ public partial class vReporteCliente : ContentPage
 
         var selectedSiniestro = e.SelectedItem as Siniestro;
         // Manejar el elemento seleccionado
-        Navigation.PushAsync(new vDetalleReporte());
+        DisplayAlert("Siniestro seleccionado", $"ID: {selectedSiniestro.SiniestroId}", "OK");
 
         // Desmarcar el elemento seleccionado
         ((ListView)sender).SelectedItem = null;

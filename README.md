@@ -13,7 +13,8 @@ Nota: Genero 0:Hombre 1: mujer
     "email":"",
     "contrasenia":"",
     "celular":"",
-    "genero":""
+    "genero":"",
+    "isAdmin":true|false
 }
 
 TIPO PETICION: "POST"

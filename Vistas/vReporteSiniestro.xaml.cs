@@ -33,19 +33,9 @@ public partial class vReporteSiniestro : ContentPage
             btn_camara.Source = ImageSource.FromStream(() => stream);
         }
 
-        
-
+       
     }
-
-
-
-
-
-    private void btnSiniestro_Clicked(object sender, EventArgs e)
-    {
-
-    }
-
+    
     private async void btnUbicacion_Clicked(object sender, EventArgs e)
     {
         CancellationTokenSource _cts = new CancellationTokenSource();
@@ -215,6 +205,64 @@ public partial class vReporteSiniestro : ContentPage
             var tipos = JsonConvert.DeserializeObject<List<TipoSiniestro>>(response);
 
             return tipos;
+        }
+    }
+    private async void btnSiniestro_Clicked(object sender, EventArgs e)
+    {
+        if (photo != null && latitud.HasValue && longitud.HasValue)
+        {
+            // Obtén la extensión del archivo
+            string extension = Path.GetExtension(photo.FileName);
+
+
+            // Convertir la foto a un Stream
+            using (var stream = await photo.OpenReadAsync())
+            {
+                // Crear cliente HTTP
+                using (var client = new HttpClient())
+                {
+                    // Configurar la dirección del servicio
+                    client.BaseAddress = new Uri("https://96a0-190-123-34-107.ngrok-free.app");
+                    string userToken = Preferences.Get("auth_token", string.Empty);
+                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", userToken);
+
+                   
+                    // Convertir la imagen a un formato adecuado para enviarla al servidor
+                    var content = new MultipartFormDataContent();
+                    content.Add(new StreamContent(stream), "file", $"photo{extension}");
+
+                    var selectedSinisterType = (TipoSiniestro)pkTipo.SelectedItem;
+
+                    if (!string.IsNullOrWhiteSpace(txtObservacion.Text)) 
+                        {
+                        await DisplayAlert("Alerta", "Ingrese la observación", "OK");
+                        return;
+                        }
+
+                    // Agregar otros parámetros si es necesario
+                    content.Add(new StringContent(txtObservacion.Text), "descripcion");
+                    content.Add(new StringContent($"{latitud},{longitud}"), "ubicacionSiniestro");
+                    content.Add(new StringContent(selectedSinisterType.SinisterTypeId), "tipoSiniestro");
+
+                    // Enviar la solicitud POST al servicio
+                    var response = await client.PostAsync("/appMovilesFinal/api/sinister/createWithPhoto", content);
+
+                    // Verificar si la solicitud fue exitosa
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var responseContent = await response.Content.ReadAsStringAsync();
+                        await DisplayAlert("Éxito", responseContent, "OK");
+                    }
+                    else
+                    {
+                        await DisplayAlert("Error", "No se pudo subir la imagen", "OK");
+                    }
+                }
+            }
+        }
+        else
+        {
+            await DisplayAlert("Advertencia", "Primero debe obtener la ubicacion del dispositivo", "OK");
         }
     }
 

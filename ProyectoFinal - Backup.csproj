@@ -61,9 +61,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Vistas\Componentes.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="Vistas\vDetalleReporte.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
