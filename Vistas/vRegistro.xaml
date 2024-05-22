@@ -48,6 +48,7 @@
                     <Entry Grid.Column="1"
                            x:Name="txtId"
                            Placeholder="CEDULA"
+                           Keyboard="Numeric"
                            VerticalOptions="Center"/>
                 </Grid>
 
