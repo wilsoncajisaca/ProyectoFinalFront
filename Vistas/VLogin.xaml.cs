@@ -96,6 +96,9 @@ public partial class VLogin : ContentPage
             // Recuperar el token de las preferencias
             string userLogged = Preferences.Get("auth_user", string.Empty);
             await DisplayAlert("Alerta", $"Usuario logeado: {userLogged}", "Cerrar");
+
+            // Navegar a la nueva página HomePage
+            await Navigation.PushAsync(new vMenu());;
         }
         else
         {

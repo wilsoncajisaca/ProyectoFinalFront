@@ -7,7 +7,7 @@ namespace ProyectoFinal.Vistas;
 public partial class vReporteCliente : ContentPage
 {
 
-    private const string url = "https://96a0-190-123-34-107.ngrok-free.app/"; //cambiar por la del back
+    private const string url = "https://96a0-190-123-34-107.ngrok-free.app/appMovilesFinal/api/sinister/getAllSinisterByPartner"; //cambiar por la del back
     private readonly HttpClient cliente = new HttpClient();
     private ObservableCollection<Siniestro> est;
 
@@ -28,7 +28,15 @@ public partial class vReporteCliente : ContentPage
 
     private void listSiniestro_ItemSelected(object sender, SelectedItemChangedEventArgs e)
     {
-        var objSiniestro = (Siniestro)e.SelectedItem;
-       // Navigation.PushAsync(new vDetalleReporte(objSiniestro));
+        if (e.SelectedItem != null)
+        {
+            var objSiniestro = (Siniestro)e.SelectedItem;
+            // Desmarcar el elemento seleccionado
+            ((ListView)sender).SelectedItem = null;
+
+            // Navegar a la página de detalles del siniestro
+            //await Navigation.PushAsync(new vDetalleReporte(objSiniestro));
+        }
+
     }
 }

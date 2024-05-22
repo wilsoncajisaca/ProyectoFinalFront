@@ -9,7 +9,7 @@ public partial class vMenu : ContentPage
 
     private void btn_historial_Clicked(object sender, EventArgs e)
     {
-
+        Navigation.PushAsync(new vReporteCliente());
     }
 
     private void btn_reportar_Clicked(object sender, EventArgs e)
