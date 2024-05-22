@@ -38,11 +38,19 @@ public partial class vReporteSiniestro : ContentPage
     
     private async void btnUbicacion_Clicked(object sender, EventArgs e)
     {
-        CancellationTokenSource _cts = new CancellationTokenSource();
-        var loadingTask = loadingLocation(_cts.Token);
-        await GetLocationAsync();
-        _cts.Cancel();
-        await loadingTask;
+        if (latitud.HasValue && longitud.HasValue)
+        {
+            await OpenMapsAsync();
+
+        }
+        else
+        {
+            CancellationTokenSource _cts = new CancellationTokenSource();
+            var loadingTask = loadingLocation(_cts.Token);
+            await GetLocationAsync();
+            _cts.Cancel();
+            await loadingTask;
+        }
 
     }
     private async Task loadingLocation(CancellationToken token)
@@ -211,6 +219,7 @@ public partial class vReporteSiniestro : ContentPage
     {
         if (photo != null && latitud.HasValue && longitud.HasValue)
         {
+            btnSiniestro.IsVisible = false;
             activityIndicator.IsVisible = true;
             activityIndicator.IsRunning = true;
             // Obtén la extensión del archivo
@@ -238,6 +247,7 @@ public partial class vReporteSiniestro : ContentPage
                     if (string.IsNullOrWhiteSpace(txtObservacion.Text)) 
                         {
                         await DisplayAlert("Alerta", "Ingrese la observación", "OK");
+                        btnSiniestro.IsVisible = true;
                         return;
                         }
 
@@ -255,10 +265,14 @@ public partial class vReporteSiniestro : ContentPage
                         activityIndicator.IsVisible = false;
                         activityIndicator.IsRunning = false;
                         var responseContent = await response.Content.ReadAsStringAsync();
+                        btnSiniestro.IsVisible = true;
                         await DisplayAlert("Éxito", "Siniestro Registrado", "OK");
+                        await Navigation.PushAsync(new vMenu());
                     }
+
                     else
                     {
+                        btnSiniestro.IsVisible = true;
                         activityIndicator.IsVisible = false;
                         activityIndicator.IsRunning = false;
                         await DisplayAlert("Error", "No se pudo subir la imagen", "OK");

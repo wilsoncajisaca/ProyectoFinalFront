@@ -22,7 +22,7 @@
     </Grid>
 
         <Frame
-            Padding="50"
+            Padding="30"
             BorderColor="White">
             <Frame Padding="50"
             WidthRequest="200" 
@@ -33,10 +33,9 @@
             BackgroundColor="#EDEDED">
                 <ImageButton Source="camara.png"
                          x:Name="btn_camara"
-                     WidthRequest="80"
-                     HeightRequest="80"
-                     Aspect="AspectFit"
-                     Clicked="btn_camra_Clicked"/>
+                     WidthRequest="150"
+                     HeightRequest="150"
+                     Aspect="AspectFit"/>
                 
             </Frame>
             
@@ -46,14 +45,27 @@
                 <RowDefinition />
                 <RowDefinition />
             </Grid.RowDefinitions>
-
-            <Button x:Name="btnGaleria"
-                Text="Ir a Galeria"
-                Grid.Row="0"
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="btnGaleria"
+                Text="Galeria"
+                Grid.Column="0"
                 Margin="30,0,30,0"
                 Clicked="btnGaleria_Clicked"/>
+
+                <Button x:Name="btnCamara"
+                Text="Tomar Foto"
+                Grid.Column="1"
+                Margin="30,0,30,0"
+                Clicked="btn_camra_Clicked"/>
+            </Grid>
+
             
-            <Button x:Name="btnUbicacion"
+
+                    <Button x:Name="btnUbicacion"
                     Text="Ubicación"
                     Grid.Row="1"
                     Margin="30,15,30,0"

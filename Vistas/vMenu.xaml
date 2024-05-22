@@ -24,7 +24,7 @@
 
         </Grid>
         <Frame
-            Padding="50"
+            Padding="20"
             BorderColor="White">
             <Frame Padding="200"
             WidthRequest="200" 
@@ -43,12 +43,17 @@
             </Frame>
 
         </Frame>
-        <Label x:Name="lbl_reportar"
+            <Label x:Name="lbl_reportar"
                 Text="REPORTAR SINIESTRO"
-               HorizontalTextAlignment="Center"/>
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold"
+                   FontFamily="bold"
+                   FontSize="Medium"            
+                   TextColor="#2D2D2D"/>
+            
 
         <Frame
-            Padding="50"
+            Padding="20"
             BorderColor="White">
             <Frame Padding="50"
             WidthRequest="200" 
@@ -71,7 +76,11 @@
 
         <Label x:Name="lbl_historial"
                Text="VER MIS REPORTES"
-               HorizontalTextAlignment="Center"/>
+               HorizontalTextAlignment="Center"
+               FontAttributes="Bold"
+                FontFamily="bold"
+                FontSize="Medium"            
+                TextColor="#2D2D2D"/>
 
     </StackLayout>
     </ScrollView>
