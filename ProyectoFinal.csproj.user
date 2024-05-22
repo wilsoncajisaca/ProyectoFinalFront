@@ -3,9 +3,15 @@
   <PropertyGroup>
     <IsFirstTimeProjectOpen>False</IsFirstTimeProjectOpen>
     <ActiveDebugFramework>net7.0-android</ActiveDebugFramework>
+<<<<<<< HEAD
     <ActiveDebugProfile>Pixel 5 - API 29 (Android 10.0 - API 29)</ActiveDebugProfile>
     <SelectedPlatformGroup>PhysicalDevice</SelectedPlatformGroup>
     <DefaultDevice>pixel_5_-_api_33</DefaultDevice>
+=======
+    <ActiveDebugProfile>Pixel 5 - API 28 (Android 9.0 - API 28)</ActiveDebugProfile>
+    <SelectedPlatformGroup>Emulator</SelectedPlatformGroup>
+    <DefaultDevice>pixel_5_-_api_28</DefaultDevice>
+>>>>>>> f06328fe2bc732ec15bc23c052e6875fb5fe02da
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-android|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
@@ -38,7 +44,7 @@
     <MauiXaml Update="Vistas\vMenu.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Vistas\vRegistro.xaml">
+    <MauiXaml Update="Vistas\vReporteAdmin.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Vistas\vReporteSiniestro.xaml">

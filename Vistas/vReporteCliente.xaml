@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoFinal.Vistas.vReporteCliente"
-             Title="vReporteCliente">
+             Title="Informativo">
+    <ScrollView>
     <StackLayout>
 
         <Grid RowDefinitions="150,.9*">
@@ -25,7 +26,8 @@
      TextColor="White"
      HorizontalTextAlignment="Center">
         </Label>
-        <Grid>
+        <Grid x:Name="grdcabecera"
+              IsVisible="false">
             <Grid.RowDefinitions>
                 <RowDefinition/>
             </Grid.RowDefinitions>
@@ -51,8 +53,16 @@
             </Label>
 
         </Grid>
+
+        <Label x:Name="lblMessage" 
+               Text="" 
+               TextColor="#4F3F9B"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" >
+        </Label>
         <ListView 
             x:Name="listSiniestro" ItemSelected="listSiniestro_ItemSelected">
+            
 
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -69,28 +79,15 @@
                                     <ColumnDefinition />
                                     <ColumnDefinition />
                                 </Grid.ColumnDefinitions>
-                                <Label x:Name="ltlTipo" 
-                               Text="{Binding tipo}"
-                               Grid.Row="0"
-                               Grid.Column="0">
-                                </Label>
-                                <Label x:Name="ltlObservacion" 
-                               Text="{Binding observacion}"
-                               Grid.Row="0"
-                               Grid.Column="1">
-                                </Label>
-                                <Label x:Name="ltlFecha" 
-                               Text="{Binding fecha}"
-                               Grid.Row="0"
-                               Grid.Column="2">
-                                </Label>
+                                <Label Text="{Binding TipoSiniestro}" Grid.Row="0" Grid.Column="0" />
+                                <Label Text="{Binding Observacion}" Grid.Row="0" Grid.Column="1" />
+                                <Label Text="{Binding FechaSiniestro}" Grid.Row="0" Grid.Column="2" />
                             </Grid>
-
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
     </StackLayout>
-   
+    </ScrollView>
 </ContentPage>
