@@ -3,15 +3,9 @@
   <PropertyGroup>
     <IsFirstTimeProjectOpen>False</IsFirstTimeProjectOpen>
     <ActiveDebugFramework>net7.0-android</ActiveDebugFramework>
-<<<<<<< HEAD
     <ActiveDebugProfile>Pixel 5 - API 28 (Android 9.0 - API 28)</ActiveDebugProfile>
     <SelectedPlatformGroup>Emulator</SelectedPlatformGroup>
     <DefaultDevice>pixel_5_-_api_28</DefaultDevice>
-=======
-    <ActiveDebugProfile>Xiaomi 2201117TL (Android 13.0 - API 33)</ActiveDebugProfile>
-    <SelectedPlatformGroup>PhysicalDevice</SelectedPlatformGroup>
-    <DefaultDevice>pixel_5_-_api_33</DefaultDevice>
->>>>>>> a6a58a8a4cb1cc38b77e2188c1f6747e875dba92
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-android|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
@@ -42,9 +36,6 @@
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Vistas\vMenu.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
-    <MauiXaml Update="Vistas\vRegistro.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Vistas\vReporteSiniestro.xaml">
