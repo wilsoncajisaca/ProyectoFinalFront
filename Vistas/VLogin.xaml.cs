@@ -33,9 +33,12 @@ public partial class VLogin : ContentPage
             Preferences.Set("auth_token", loginData.Token);
             Preferences.Set("auth_user", loginData.Usuario);
 
+
             // Recuperar el token de las preferencias
             string userLogged = Preferences.Get("auth_user", string.Empty);
             await DisplayAlert("Alerta", $"Usuario logeado: {userLogged}", "Cerrar");
+
+            await Navigation.PushAsync(new vMenu());
         }
         else
         {
@@ -83,6 +86,8 @@ public partial class VLogin : ContentPage
         }
 
         return result;
+
+        
     }
 
     private void btnRegister_Clicked(object sender, EventArgs e)

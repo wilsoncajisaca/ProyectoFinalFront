@@ -45,16 +45,18 @@
                 <RowDefinition />
                 <RowDefinition />
             </Grid.RowDefinitions>
-            <Label x:Name="lbl_foto"
-                    Text="AGREGAR UBICACIÓN"
-                    Grid.Row="0"
-                    HorizontalTextAlignment="Center"/>
-            <Entry Grid.Row="1"
-                   x:Name="txtUbi"
-                   Placeholder="0'0'0'0'"
-                   Margin="70,0,70,0"
-                    HorizontalTextAlignment="Center"
-                   IsReadOnly="True"/>
+
+            <Button x:Name="btnGaleria"
+                Text="Ir a Galeria"
+                Grid.Row="0"
+                Margin="30,0,30,0"
+                Clicked="btnGaleria_Clicked"/>
+            
+            <Button x:Name="btnUbicacion"
+                    Text="Ubicación"
+                    Grid.Row="1"
+                    Margin="30,15,30,0"
+                    Clicked="btnUbicacion_Clicked"/>
 
         </Grid>
         <Grid  Padding="20">
@@ -74,21 +76,14 @@
         HorizontalTextAlignment="Start"/>
 
             <Picker Grid.Column="1"
-         Grid.Row="0"
-         x:Name="pkTipo"  >
-                <Picker.Items  >
-                    <x:String>Accidente de Tránsito</x:String>
-                    <x:String>Agua</x:String>
-                    <x:String>Luz</x:String>
-                    <x:String>Infraestructura Municipal</x:String>
-                </Picker.Items>
-                <Picker.Title>
-                    <x:String>Accidente de Tránsito</x:String>
-                </Picker.Title>
-            </Picker>
+                Grid.Row="0"
+                x:Name="pkTipo"
+                Title="Seleccione un tipo"
+                ItemDisplayBinding="{Binding Name}"/>
 
-        
-        <Label x:Name="lbl_observa"
+
+
+            <Label x:Name="lbl_observa"
                Text="OBSERVACION:"
                Grid.Row="1"
                Grid.Column="0"
@@ -104,8 +99,8 @@
 
             <Frame BorderColor="Black"  Margin="10,0,10,0">
             <Entry Grid.Row="0"
-              x:Name="txtObservacion"
-                   Margin="0,0,0,0"
+                x:Name="txtObservacion"
+                Margin="0,0,0,0"
                 Placeholder="Escriba aqui"/>
         </Frame>
 

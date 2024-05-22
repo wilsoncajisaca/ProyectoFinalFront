@@ -19,9 +19,7 @@ public partial class Componentes : ContentPage
         photo = await MediaPicker.CapturePhotoAsync();
         if (photo != null)
         {
-            // Obtén la extensión del archivo
-            string extension = Path.GetExtension(photo.FileName);
-            extensionLabel.Text = $"Extensión de la foto: {extension}";
+            
             // Muestra la foto en la interfaz
             var stream = await photo.OpenReadAsync();
             PhotoImage.Source = ImageSource.FromStream(() => stream);
@@ -156,8 +154,7 @@ public partial class Componentes : ContentPage
             {
                 var stream = await photo.OpenReadAsync();
                 PhotoImage.Source = ImageSource.FromStream(() => stream);
-                // Obtener la extensión del archivo
-                string extension = Path.GetExtension(photo.FileName);
+                
             }
         }
         catch (FeatureNotSupportedException fnsEx)
@@ -180,7 +177,7 @@ public partial class Componentes : ContentPage
         {
             // Obtén la extensión del archivo
             string extension = Path.GetExtension(photo.FileName);
-            extensionLabel.Text = $"Extensión de la foto: {extension}";
+            
 
             // Convertir la foto a un Stream
             using (var stream = await photo.OpenReadAsync())
@@ -192,7 +189,7 @@ public partial class Componentes : ContentPage
                     client.BaseAddress = new Uri("https://96a0-190-123-34-107.ngrok-free.app");
 
                     // Agregar token de autorización Bearer
-                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMDAzMzI3MjgzIiwiaWF0IjoxNzE2MzM3OTM0LCJleHAiOjE3MTY0MjgxMzR9.Iy_1UgZyP0MG3tsvqOCpxwQK5KCl7IhlbGN2AIdno0Zg9jYGlK_gyY-PrBOsq_DiBqYGxHHOAwbCN0FfEQIC9w");
+                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIwMTA2MTQ2MTM3IiwiaWF0IjoxNzE2MzQ1NzY2LCJleHAiOjE3MTY0MzU5NjZ9.kN9UerTdYehcJwWndRAgdA_xWfRN5k72s3ppEDIQJMDm09FW056E9zC9IYx_2EmZrp7YXIJ1KSwt0D5P47TESw");
 
                     // Convertir la imagen a un formato adecuado para enviarla al servidor
                     var content = new MultipartFormDataContent();
