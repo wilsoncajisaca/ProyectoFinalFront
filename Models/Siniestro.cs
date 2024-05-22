@@ -9,20 +9,28 @@ namespace ProyectoFinal.Models
 {
     public class Siniestro
     {
-        [JsonProperty("siniestroId")]
-        public string SiniestroId { get; set; }
+         [JsonProperty("siniestroId")] 
+         public string SiniestroId { get; set; }
 
-        [JsonProperty("ubicacion")]
-        public string Ubicacion { get; set; }
+         [JsonProperty("ubicacion")]
+         public string Ubicacion { get; set; }
 
-        [JsonProperty("observacion")]
-        public string Observacion { get; set; }
+         [JsonProperty("observacion")]
+         public string Observacion { get; set; }
 
-        [JsonProperty("tipoSiniestro")]
-        public string TipoSiniestro { get; set; }
+         [JsonProperty("tipoSiniestro")]
+         public string TipoSiniestro { get; set; }
 
-        [JsonProperty("FechaSiniestro")]
-        public string fechaSiniestro { get; set; }
+         [JsonProperty("fechaSiniestro")]
+         public string FechaSiniestro { get; set; }
+
+        [JsonProperty("cedulaUsuario")]
+        public string CedulaUsuario { get; set; }
+
+        [JsonProperty("nombreUsuario")]
+        public string NombreUsuario { get; set; }
+
+
 
     }
 }
