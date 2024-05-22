@@ -30,7 +30,11 @@ namespace ProyectoFinal.Models
         [JsonProperty("nombreUsuario")]
         public string NombreUsuario { get; set; }
 
-
+        [JsonProperty("colorFondo")]
+        public string ColorFondo { get; set; }
+        [JsonProperty("urlFoto")]
+        public string UrlFoto { get; set; }
+        public Color BackgroundColor { get; set; }
 
     }
 }

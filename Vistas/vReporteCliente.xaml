@@ -4,9 +4,8 @@
              x:Class="ProyectoFinal.Vistas.vReporteCliente"
              Title="Informativo">
     <ScrollView>
-    <StackLayout>
-
-        <Grid RowDefinitions="150,.9*">
+        <StackLayout>
+            <Grid RowDefinitions="150,.9*">
             <Image Aspect="AspectFill" Source="siniestro.png"/>
             <Grid BackgroundColor="#4F3F9B" Opacity=".9"/>
 
@@ -20,74 +19,62 @@
             </Grid>
 
         </Grid>
-        <Label 
-     Text="espacio" 
-     FontSize="24"
-     TextColor="White"
-     HorizontalTextAlignment="Center">
-        </Label>
-        <Grid x:Name="grdcabecera"
-              IsVisible="false">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            <Label Text="TIPO"
-            Grid.Row="0"
-            Grid.Column="0"
-            TextColor="#4F3F9B">
+            <Label 
+            Text="espacio" 
+            FontSize="24"
+            TextColor="White"
+            HorizontalTextAlignment="Center">
             </Label>
-            <Label Text="OBSERVACION"
-            Grid.Row="0"
-            Grid.Column="1"
-            TextColor="#4F3F9B">
-            </Label>
-            <Label Text="FECHA"
-            Grid.Row="0"
-            Grid.Column="2"
-            TextColor="#4F3F9B">
-            </Label>
+            <Label x:Name="lblMessage" 
+                    IsVisible="false"
+                    Text="" 
+                    TextColor="#4F3F9B"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
 
-        </Grid>
-
-        <Label x:Name="lblMessage" 
-               Text="" 
-               TextColor="#4F3F9B"
-               HorizontalOptions="Center"
-               VerticalOptions="Center" >
-        </Label>
-        <ListView 
-            x:Name="listSiniestro" ItemSelected="listSiniestro_ItemSelected">
-            
-
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-
-                        <StackLayout>
-
-                            <Grid>
+            <CollectionView x:Name="collectionViewSiniestro" 
+                    SelectionChanged="collectionViewSiniestro_SelectionChanged"
+                    SelectionMode="Single">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="2" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame HasShadow="True" CornerRadius="20" Padding="0" Margin="10"
+                       BackgroundColor="{Binding BackgroundColor}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnFrameTapped" />
+                            </Frame.GestureRecognizers>
+                            <Grid Padding="10" WidthRequest="150" HeightRequest="200">
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition />
-                                    <ColumnDefinition />
-                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <Label Text="{Binding TipoSiniestro}" Grid.Row="0" Grid.Column="0" />
-                                <Label Text="{Binding Observacion}" Grid.Row="0" Grid.Column="1" />
-                                <Label Text="{Binding FechaSiniestro}" Grid.Row="0" Grid.Column="2" />
+
+                                <Image Source="{Binding UrlFoto}" HeightRequest="100" WidthRequest="100"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center" />  
+                                <Label Text="{Binding TipoSiniestro}" Grid.Row="1" 
+                                       FontSize="Medium" TextColor="White" 
+                                       HorizontalOptions="Center" VerticalOptions="Center" />
+                                <Label Text="{Binding Observacion}" Grid.Row="2" 
+                                       FontSize="12" TextColor="White" 
+                                       HorizontalOptions="Center" VerticalOptions="Center"
+                                       LineBreakMode="TailTruncation"
+                                       MaxLines="1"/>
+                                <Label Text="{Binding FechaSiniestro}" Grid.Row="3" 
+                                       FontSize="10" TextColor="White"
+                                       HorizontalOptions="Center" VerticalOptions="Center" />
                             </Grid>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
     </ScrollView>
 </ContentPage>

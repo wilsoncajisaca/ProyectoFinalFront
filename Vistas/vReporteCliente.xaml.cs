@@ -1,10 +1,5 @@
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Threading.Tasks;
-using Microsoft.Maui.Controls;
 using ProyectoFinal.Models;
 
 namespace ProyectoFinal.Vistas;
@@ -49,17 +44,19 @@ public partial class vReporteCliente : ContentPage
             {
                 string responseBody = await response.Content.ReadAsStringAsync();
                 List<Siniestro> siniestros = JsonConvert.DeserializeObject<List<Siniestro>>(responseBody);
+                foreach (var siniestro in siniestros)
+                {
+                    siniestro.BackgroundColor = ConvertHexToColor(siniestro.ColorFondo);
+                }
 
                 if (siniestros == null || siniestros.Count == 0)
                 {
-                    // Maneja el caso de lista vacía
                     lblMessage.Text = "No se encontraron siniestros.";
                 }
                 else
                 {
-                    grdcabecera.IsVisible = true;
-                    lblMessage.Text = string.Empty; // Limpiar cualquier mensaje previo
-                    listSiniestro.ItemsSource = siniestros;
+                    lblMessage.Text = string.Empty;
+                    collectionViewSiniestro.ItemsSource = siniestros;
                 }
             }
             else
@@ -78,6 +75,15 @@ public partial class vReporteCliente : ContentPage
         }
     }
 
+    private Color ConvertHexToColor(string hex)
+    {
+        if (!string.IsNullOrEmpty(hex))
+        {
+            return Color.FromArgb(hex);
+        }
+        return Colors.Transparent;
+    }
+
     private void listSiniestro_ItemSelected(object sender, SelectedItemChangedEventArgs e)
     {
         if (e.SelectedItem == null)
@@ -91,4 +97,22 @@ public partial class vReporteCliente : ContentPage
         ((ListView)sender).SelectedItem = null;
     }
 
+    private async void collectionViewSiniestro_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        var selectedSiniestro = e.CurrentSelection.FirstOrDefault() as Siniestro;
+        if (selectedSiniestro != null)
+        {
+            await DisplayAlert("Seleccionado", $"Has seleccionado: {selectedSiniestro.TipoSiniestro}", "OK");
+        }
+    }
+
+    private async void OnFrameTapped(object sender, EventArgs e)
+    {
+        var frame = sender as Frame;
+        var siniestro = frame.BindingContext as Siniestro;
+        if (siniestro != null)
+        {
+            await DisplayAlert("Seleccionado", $"Has seleccionado: {siniestro.TipoSiniestro}", "OK");
+        }
+    }
 }
