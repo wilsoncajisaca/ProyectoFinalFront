@@ -11,11 +11,12 @@
 
                 <Grid ColumnDefinitions="150">
                     <Label Text="MIS REPORTES" 
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center"
-                    TextColor="White"
-                    HorizontalTextAlignment="Center"
-                    FontSize="20"/>
+                        FontFamily="bold"
+                        FontSize="Medium" 
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        TextColor="White"
+                        HorizontalTextAlignment="Center"/>
                 </Grid>
 
             </Grid>
