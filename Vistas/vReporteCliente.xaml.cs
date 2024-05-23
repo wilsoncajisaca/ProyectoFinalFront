@@ -25,7 +25,6 @@ public partial class vReporteCliente : ContentPage
     {
         try
         {
-            // Recuperar el token de las preferencias
             string token = Preferences.Get("auth_token", string.Empty);
 
             if (string.IsNullOrEmpty(token))

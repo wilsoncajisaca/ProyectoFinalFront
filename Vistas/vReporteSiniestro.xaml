@@ -6,7 +6,7 @@
     <ScrollView>
     <StackLayout>
 
-    <Grid RowDefinitions="150,.9*">
+    <Grid RowDefinitions="125,.9*">
         <Image Aspect="AspectFill" Source="siniestro.png"/>
         <Grid BackgroundColor="#4F3F9B" Opacity=".9"/>
         
@@ -22,19 +22,20 @@
     </Grid>
 
         <Frame
-            Padding="30"
+            Padding="15"
             BorderColor="White">
-            <Frame Padding="50"
-            WidthRequest="200" 
-            HeightRequest="180"
-            CornerRadius="10"
-            HasShadow="True"
-            BorderColor="Black"
-            BackgroundColor="#EDEDED">
+            <Frame
+                Padding="25"
+                WidthRequest="200" 
+                HeightRequest="200"
+                CornerRadius="5"
+                HasShadow="True"
+                BorderColor="Black"
+                BackgroundColor="#EDEDED">
                 <ImageButton Source="camara.png"
                          x:Name="btn_camara"
-                     WidthRequest="150"
-                     HeightRequest="150"
+                     WidthRequest="190"
+                     HeightRequest="190"
                      Aspect="AspectFit"/>
                 
             </Frame>

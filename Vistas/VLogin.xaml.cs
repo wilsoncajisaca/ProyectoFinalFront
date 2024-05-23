@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using ProyectoFinal.Models;
 using ProyectoFinal.Objetos;
 using System.Text;
 
@@ -10,6 +11,30 @@ public partial class VLogin : ContentPage
     public VLogin()
     {
         InitializeComponent();
+        NavigationPage.SetHasBackButton(this, false);
+        ignoreLogin();
+    }
+
+    private void ignoreLogin()
+    {
+        if (Preferences.ContainsKey("auth_token"))
+        {
+            Navigation.PushAsync(new vMenu());
+            Navigation.RemovePage(this);
+        }
+    }
+
+    // Método estático para mostrar el diálogo de carga
+    public static async Task ShowLoading()
+    {
+        var loadingPage = new Vistas.Popup.LoadingPopup();
+        await Application.Current.MainPage.Navigation.PushModalAsync(loadingPage);
+    }
+
+    // Método estático para ocultar el diálogo de carga
+    public static async Task HideLoading()
+    {
+        await Application.Current.MainPage.Navigation.PopModalAsync();
     }
 
     private async void btnLogin_Clicked(object sender, EventArgs e)
@@ -20,36 +45,30 @@ public partial class VLogin : ContentPage
         var username = txtUser.Text;
         var password = txtPass.Text;
 
-        var result = await LoginAsync(username, password);
+        var result = await LoginAsync(username.Trim(), password);
         activityIndicator.IsVisible = false;
         activityIndicator.IsRunning = false;
         btnLogin.IsVisible = true;
         if ((bool)result["IsSuccess"])
         {
-            // Manejar la respuesta exitosa aquí
             var loginData = (LoginResponse)result["Data"];
 
-            // Guardar el token en las preferencias
             Preferences.Set("auth_token", loginData.Token);
             Preferences.Set("auth_user", loginData.Usuario);
             Preferences.Set("auth_rol", loginData.Rol);
 
-
             await Navigation.PushAsync(new vMenu());
-            
         }
         else
         {
-            // Manejar la respuesta fallida aquí
             var errorMessage = (string)result["ErrorMessage"];
-            Console.WriteLine($"Login failed: {errorMessage}");
             await DisplayAlert("Error", errorMessage, "OK");
         }
     }
 
     private async Task<Dictionary<string, object>> LoginAsync(string username, string password)
     {
-        var url = "https://96a0-190-123-34-107.ngrok-free.app/appMovilesFinal/api/auth/login";
+        var url = $"{Common.BaseUrl}/appMovilesFinal/api/auth/login";
         var loginData = new { username = username, password = password };
         var json = JsonConvert.SerializeObject(loginData);
         var content = new StringContent(json, Encoding.UTF8, "application/json");
@@ -77,8 +96,6 @@ public partial class VLogin : ContentPage
         }
         catch (HttpRequestException e)
         {
-            // Manejo de errores en la solicitud
-            Console.WriteLine($"Request exception: {e.Message}");
             result["IsSuccess"] = false;
             result["ErrorMessage"] = "Ocurrió un error al intentar conectarse al servicio.";
         }

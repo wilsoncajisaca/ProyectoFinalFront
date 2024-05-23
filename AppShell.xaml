@@ -11,4 +11,14 @@
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Shell">
+                <Setter Property="Shell.NavBarIsVisible" Value="True" />
+                <Setter Property="Shell.BackgroundColor" Value="Transparent" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
+
 </Shell>

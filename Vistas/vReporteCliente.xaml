@@ -5,71 +5,76 @@
              Title="Informativo">
     <ScrollView>
         <StackLayout>
-            <Grid RowDefinitions="150,.9*">
-            <Image Aspect="AspectFill" Source="siniestro.png"/>
-            <Grid BackgroundColor="#4F3F9B" Opacity=".9"/>
+            <Grid RowDefinitions="125,.9*">
+                <Image Aspect="AspectFill" Source="siniestro.png"/>
+                <Grid BackgroundColor="#4F3F9B" Opacity=".9"/>
 
-            <Grid ColumnDefinitions="150">
-                <Label Text="MIS REPORTES" 
+                <Grid ColumnDefinitions="150">
+                    <Label Text="MIS REPORTES" 
                     HorizontalOptions="Center"
                     VerticalOptions="Center"
                     TextColor="White"
                     HorizontalTextAlignment="Center"
                     FontSize="20"/>
-            </Grid>
+                </Grid>
 
-        </Grid>
-            <Label 
-            Text="espacio" 
-            FontSize="24"
-            TextColor="White"
-            HorizontalTextAlignment="Center">
-            </Label>
+            </Grid>
             <Label x:Name="lblMessage" 
                     IsVisible="false"
-                    Text="" 
                     TextColor="#4F3F9B"
                     HorizontalOptions="Center"
                     VerticalOptions="Center"/>
 
             <CollectionView x:Name="collectionViewSiniestro" 
-                    SelectionChanged="collectionViewSiniestro_SelectionChanged"
-                    SelectionMode="Single">
+                SelectionChanged="collectionViewSiniestro_SelectionChanged"
+                SelectionMode="Single">
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Orientation="Vertical" Span="2" />
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame HasShadow="True" CornerRadius="20" Padding="0" Margin="10"
-                       BackgroundColor="{Binding BackgroundColor}">
+                        <Frame BorderColor="Transparent" HasShadow="True" CornerRadius="5" Padding="10" Margin="10"
+                            BackgroundColor="{Binding BackgroundColor}">
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="OnFrameTapped" />
                             </Frame.GestureRecognizers>
-                            <Grid Padding="10" WidthRequest="150" HeightRequest="200">
+                            <Grid WidthRequest="125" HeightRequest="175">
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="*" />
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="1*" />
+                                    <RowDefinition Height="1*" />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
 
-                                <Image Source="{Binding UrlFoto}" HeightRequest="100" WidthRequest="100"
-                                       HorizontalOptions="Center"
-                                       VerticalOptions="Center" />  
-                                <Label Text="{Binding TipoSiniestro}" Grid.Row="1" 
-                                       FontSize="Medium" TextColor="White" 
-                                       HorizontalOptions="Center" VerticalOptions="Center" />
-                                <Label Text="{Binding Observacion}" Grid.Row="2" 
-                                       FontSize="12" TextColor="White" 
+                                <Frame Grid.Row="0"
+                                       CornerRadius="10"
+                                       Padding="0"
+                                       Margin="0"
+                                       IsClippedToBounds="True"
+                                       HasShadow="False">
+                                    <Image Source="{Binding UrlFoto}" 
+                                           Aspect="AspectFill"
+                                           HeightRequest="110"
+                                           WidthRequest="150" />
+                                </Frame>
+
+                                <!-- Contenido de texto en la segunda fila -->
+                                <StackLayout Grid.Row="1" Padding="10" VerticalOptions="End">
+                                    <Label Text="{Binding TipoSiniestro}" 
+                                       FontSize="Medium" TextColor="Black" 
                                        HorizontalOptions="Center" VerticalOptions="Center"
                                        LineBreakMode="TailTruncation"
                                        MaxLines="1"/>
-                                <Label Text="{Binding FechaSiniestro}" Grid.Row="3" 
-                                       FontSize="10" TextColor="White"
+                                    <Label Text="{Binding Observacion}" 
+                                       FontSize="12" TextColor="Black" 
+                                       HorizontalOptions="Center" VerticalOptions="Center"
+                                       LineBreakMode="TailTruncation"
+                                       MaxLines="1"/>
+                                    <Label Text="{Binding FechaSiniestro}" 
+                                       FontSize="10" TextColor="Green"
                                        HorizontalOptions="Center" VerticalOptions="Center" />
+                                </StackLayout>
                             </Grid>
                         </Frame>
                     </DataTemplate>

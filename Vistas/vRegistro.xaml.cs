@@ -22,7 +22,6 @@ public partial class vRegistro : ContentPage
         string email = txtEmail.Text;
         string contrasenia = txtPass.Text;
 
-        // Validar que los campos no estén vacíos
         if (string.IsNullOrEmpty(cedula) ||
             string.IsNullOrEmpty(nombre) ||
             string.IsNullOrEmpty(apellido) ||
@@ -44,10 +43,10 @@ public partial class vRegistro : ContentPage
         var url = "https://96a0-190-123-34-107.ngrok-free.app/appMovilesFinal/api/partner/create";
         var userData = new
         {
-            cedula = cedula,
-            nombre = nombre,
-            apellido = apellido,
-            email = email,
+            cedula = cedula.Trim(),
+            nombre = nombre.Trim(),
+            apellido = apellido.Trim(),
+            email = email.Trim(),
             contrasenia = contrasenia,
             celular = "1234567890",
             direccion = "Sin direccion",
@@ -60,7 +59,6 @@ public partial class vRegistro : ContentPage
         try
         {
             var response = await client.PostAsync(url, content);
-            // Oculta el ActivityIndicator y muestra el botón
             activityIndicator.IsVisible = false;
             activityIndicator.IsRunning = false;
             btnRegister.IsVisible = true;

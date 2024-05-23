@@ -30,6 +30,10 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android|AnyCPU'">
+	  <AndroidPackageFormat>apk</AndroidPackageFormat>
+	</PropertyGroup>
+
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
@@ -52,6 +56,7 @@
 	  <None Remove="Resources\Images\candado.png" />
 	  <None Remove="Resources\Images\correo.png" />
 	  <None Remove="Resources\Images\identificacion.png" />
+	  <None Remove="Resources\Images\salida.png" />
 	  <None Remove="Resources\Images\usuario.png" />
 	</ItemGroup>
 
@@ -61,6 +66,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Vistas\Popup\LoadingPopup.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Vistas\vDetalleReporte.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
