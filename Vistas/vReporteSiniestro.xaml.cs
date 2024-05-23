@@ -15,25 +15,16 @@ public partial class vReporteSiniestro : ContentPage
 	{
 		InitializeComponent();
         CargarTiposAsync();
-
     }
-
-   
 
     private async void btn_camra_Clicked(object sender, EventArgs e)
     {
-
-        // Código para mostrar la foto
         photo = await MediaPicker.CapturePhotoAsync();
         if (photo != null)
         {
-
-            // Muestra la foto en la interfaz
             var stream = await photo.OpenReadAsync();
             btn_camara.Source = ImageSource.FromStream(() => stream);
         }
-
-       
     }
     
     private async void btnUbicacion_Clicked(object sender, EventArgs e)
@@ -51,8 +42,8 @@ public partial class vReporteSiniestro : ContentPage
             _cts.Cancel();
             await loadingTask;
         }
-
     }
+
     private async Task loadingLocation(CancellationToken token)
     {
         string loading = "Cargando";
@@ -68,6 +59,7 @@ public partial class vReporteSiniestro : ContentPage
             }
         }
     }
+
     private async Task GetLocationAsync()
     {
         try
@@ -186,10 +178,7 @@ public partial class vReporteSiniestro : ContentPage
     {
         try
         {
-            // Obtener los datos desde el servicio web
             var tipos = await ObtenerTiposDesdeServicioWeb();
-
-            // Asignar los datos obtenidos al Picker
             pkTipo.ItemsSource = tipos;
         }
         catch (Exception ex)
@@ -202,14 +191,10 @@ public partial class vReporteSiniestro : ContentPage
     {
         using (var client = new HttpClient())
         {
-            // URL del servicio web
-            var url = "https://96a0-190-123-34-107.ngrok-free.app/appMovilesFinal/api/sinisterType/getAllSinisterType";
+            var url = $"{Common.BaseUrl}/appMovilesFinal/api/sinisterType/getAllSinisterType";
             string userToken = Preferences.Get("auth_token", string.Empty);
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", userToken);
-            // Realizar la solicitud GET al servicio web
             var response = await client.GetStringAsync(url);
-
-            // Parsear la respuesta JSON a una lista de SinisterType
             var tipos = JsonConvert.DeserializeObject<List<TipoSiniestro>>(response);
 
             return tipos;
@@ -222,18 +207,14 @@ public partial class vReporteSiniestro : ContentPage
             btnSiniestro.IsVisible = false;
             activityIndicator.IsVisible = true;
             activityIndicator.IsRunning = true;
-            // Obtén la extensión del archivo
             string extension = Path.GetExtension(photo.FileName);
 
 
-            // Convertir la foto a un Stream
             using (var stream = await photo.OpenReadAsync())
             {
-                // Crear cliente HTTP
                 using (var client = new HttpClient())
                 {
-                    // Configurar la dirección del servicio
-                    client.BaseAddress = new Uri("https://96a0-190-123-34-107.ngrok-free.app");
+                    client.BaseAddress = new Uri(Common.BaseUrl);
                     string userToken = Preferences.Get("auth_token", string.Empty);
                     client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", userToken);
 
@@ -269,7 +250,6 @@ public partial class vReporteSiniestro : ContentPage
                         await DisplayAlert("Éxito", "Siniestro Registrado", "OK");
                         await Navigation.PushAsync(new vMenu());
                     }
-
                     else
                     {
                         btnSiniestro.IsVisible = true;

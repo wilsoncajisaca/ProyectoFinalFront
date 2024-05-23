@@ -24,19 +24,6 @@ public partial class VLogin : ContentPage
         }
     }
 
-    // Método estático para mostrar el diálogo de carga
-    public static async Task ShowLoading()
-    {
-        var loadingPage = new Vistas.Popup.LoadingPopup();
-        await Application.Current.MainPage.Navigation.PushModalAsync(loadingPage);
-    }
-
-    // Método estático para ocultar el diálogo de carga
-    public static async Task HideLoading()
-    {
-        await Application.Current.MainPage.Navigation.PopModalAsync();
-    }
-
     private async void btnLogin_Clicked(object sender, EventArgs e)
     {
         btnLogin.IsVisible = false;

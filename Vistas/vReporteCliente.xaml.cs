@@ -6,22 +6,27 @@ namespace ProyectoFinal.Vistas;
 
 public partial class vReporteCliente : ContentPage
 {
-
     private static readonly HttpClient client = new HttpClient();
     private Siniestro siniestroSeleccionado;
     private Siniestro siniestro;
+    private Boolean isAllData = false;
 
-    public  vReporteCliente()
+    public vReporteCliente(Boolean isAllData)
     {
         InitializeComponent();
+        this.isAllData = isAllData;
         InitializeAsync();
     }
 
     private async Task InitializeAsync()
     {
+        CancellationTokenSource _cts = new CancellationTokenSource();
+        var loadingTask = loadingLocation(_cts.Token);
         await LoadSiniestrosAsync();
+        _cts.Cancel();
+        await loadingTask;
+        lblMessage.IsVisible = false;
     }
-
 
     private async Task LoadSiniestrosAsync()
     {
@@ -31,15 +36,14 @@ public partial class vReporteCliente : ContentPage
 
             if (string.IsNullOrEmpty(token))
             {
-                lblMessage.Text = "Token no encontrado. Por favor, inicia sesión nuevamente.";
-                // Navegar a la página de inicio de sesión u otra acción
-                return;
+                await DisplayAlert("Advertencia", "Por favor vuelve a iniciar sesion", "OK");
+                await Navigation.PushAsync(new VLogin());
             }
-
-            
-
-            string url  = $"{Common.BaseUrl}/appMovilesFinal/api/sinister/getAllSinisterByPartner";
-
+            string url = $"{Common.BaseUrl}/appMovilesFinal/api/sinister/getAllSinisterByPartner";
+            if (isAllData)
+            {
+                url = $"{Common.BaseUrl}/appMovilesFinal/api/sinister/getAllSinister";
+            }
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             HttpResponseMessage response = await client.GetAsync(url);
 
@@ -64,7 +68,6 @@ public partial class vReporteCliente : ContentPage
             }
             else
             {
-                // Maneja el error de respuesta no exitosa
                 lblMessage.Text = $"No se pudo obtener la información: {response.StatusCode}";
             }
         }
@@ -78,6 +81,22 @@ public partial class vReporteCliente : ContentPage
         }
     }
 
+    private async Task loadingLocation(CancellationToken token)
+    {
+        string loading = "Cargando";
+
+        while (!token.IsCancellationRequested)
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                if (token.IsCancellationRequested) break;
+
+                lblMessage.Text = loading + new string('.', i);
+                await Task.Delay(500);
+            }
+        }
+    }
+
     private Color ConvertHexToColor(string hex)
     {
         if (!string.IsNullOrEmpty(hex))
@@ -85,19 +104,6 @@ public partial class vReporteCliente : ContentPage
             return Color.FromArgb(hex);
         }
         return Colors.Transparent;
-    }
-
-    private void listSiniestro_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-    {
-        if (e.SelectedItem == null)
-            return;
-
-        var selectedSiniestro = e.SelectedItem as Siniestro;
-        // Manejar el elemento seleccionado
-        
-
-        // Desmarcar el elemento seleccionado
-        ((ListView)sender).SelectedItem = null;
     }
 
     private async void collectionViewSiniestro_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -115,7 +121,6 @@ public partial class vReporteCliente : ContentPage
         var siniestro = frame.BindingContext as Siniestro;
         if (siniestro != null)
         {
-
             await Navigation.PushAsync(new vDetalleReporte(siniestro));
         }
     }

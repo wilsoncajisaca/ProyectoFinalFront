@@ -53,6 +53,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Vistas\vReporteAdmin.xaml.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Remove="Vistas\vReporteAdmin.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <None Remove="Resources\Images\candado.png" />
 	  <None Remove="Resources\Images\correo.png" />
 	  <None Remove="Resources\Images\identificacion.png" />
@@ -79,9 +87,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Vistas\vRegistro.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Vistas\vReporteAdmin.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Vistas\vReporteSiniestro.xaml">

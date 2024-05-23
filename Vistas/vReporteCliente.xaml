@@ -20,7 +20,7 @@
 
             </Grid>
             <Label x:Name="lblMessage" 
-                    IsVisible="false"
+                    FontSize="25"
                     TextColor="#4F3F9B"
                     HorizontalOptions="Center"
                     VerticalOptions="Center"/>

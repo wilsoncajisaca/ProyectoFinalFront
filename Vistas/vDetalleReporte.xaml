@@ -5,26 +5,22 @@
              Title="">
     <ScrollView>
         <StackLayout>
-        <Grid RowDefinitions="150,.9*">
+        <Grid RowDefinitions="125,.9*">
             <Image Aspect="AspectFill" Source="siniestro.png"/>
-            <Grid BackgroundColor="#4F3F9B" Opacity=".9"/>
-
-            <Grid ColumnDefinitions="150">
-                <Label Text="DETALLE DEL REPORTES" 
-             HorizontalOptions="Center"
-             VerticalOptions="Center"
-             TextColor="White"
-             HorizontalTextAlignment="Center"
-             FontSize="20"/>
+                <Grid BackgroundColor="#4F3F9B" Opacity=".9"/>
+                <Grid ColumnDefinitions="150">
+                    <Label Text="DETALLE DEL REPORTES" 
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             TextColor="White"
+                             HorizontalTextAlignment="Center"
+                             FontSize="20"/>                
+                </Grid>
             </Grid>
 
-        </Grid>
-
             <Frame
-     Padding="15"
-     BorderColor="White">
-
-
+                 Padding="15"
+                 BorderColor="White">
                 <Frame
                     Padding="25"
                     WidthRequest="200" 
@@ -33,54 +29,43 @@
                     HasShadow="True"
                     BorderColor="Black"
                     BackgroundColor="#EDEDED">
-                                        <Image x:Name="img_foto"
+                    <Image x:Name="img_foto"
                          WidthRequest="190"
                          HeightRequest="190"
                          Aspect="AspectFit"/>
-
                 </Frame>
-
-
-
-
             </Frame>
+            
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition />
-
-
                 </Grid.RowDefinitions>
-                <Grid >
+                <Grid Grid.Row="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="200"/>
                         <ColumnDefinition Width="200"/>
                     </Grid.ColumnDefinitions>
-                    <Label Text="Persona que Reporta:"
+                    <Label
+                         Text="Persona que Reporta:"
                          Grid.Column="0"
                          Margin="30,0,30,0"/>
-
                     <Label x:Name="lbl_nombre"
-                         
                          Grid.Column="1"
                          Margin="30,0,30,0"/>
-
-
                 </Grid>
-                
-
-                <Frame BorderColor="Black"  Margin="30,15,30,0"
+                <Frame BorderColor="Black"
+                       Margin="30"
                        Padding="10">
-                    <Label Grid.Row="2"
-                        x:Name="lbl_Ubicacion"
-                        Margin="0,0,0,0"
-                        />
+                    <Label Grid.Row="1"
+                        x:Name="lbl_Ubicacion"/>
                 </Frame>
             </Grid>
-            <Grid  Padding="40">
 
+            <Grid  Padding="25,0,0,0">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="2*"/>
-                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="15"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="200"/>
@@ -91,34 +76,32 @@
                      Grid.Row="0"
                      Grid.Column="0"
                      HorizontalTextAlignment="Start"/>
-
-                     <Label x:Name="lbl_Tipo"
-                        
+                <Label x:Name="lbl_Tipo"
                         Grid.Column="1"
                         Grid.Row="0"
                         HorizontalTextAlignment="Start"/>
-  
-
                 <Label 
-                    Text="OBSERVACION:"
+                    Text="Estado:"
                     Grid.Row="1"
                     Grid.Column="0"
                     HorizontalTextAlignment="Start"/>
-
+                <Label 
+                    Text="Observaciones:"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    HorizontalTextAlignment="Start"/>
             </Grid>
+            
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-
                 <Frame BorderColor="Black"  Margin="10,0,10,0">
                     <Label x:Name="lbl_Observacion"
                         Grid.Row="0"
-                    
-                    Margin="0,0,0,0"/>
+                        Margin="0,0,0,0"/>
                 </Frame>
-
             </Grid>
         </StackLayout>
     </ScrollView>

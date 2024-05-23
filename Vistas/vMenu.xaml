@@ -25,25 +25,27 @@
                         FontSize="20"/>
                 </Grid>
             </Grid>
-        <Frame
-            Padding="20"
-            BorderColor="White">
-            <Frame Padding="200"
-            WidthRequest="200" 
-            HeightRequest="180"
-            CornerRadius="10"
-            HasShadow="True"
-            BorderColor="Black"
-            BackgroundColor="#EDEDED">
-                <ImageButton Source="reportar.png"
-                         x:Name="btn_reportar"
-                     WidthRequest="100"
-                     HeightRequest="100"
-                     Aspect="AspectFit"
-                     Clicked="btn_reportar_Clicked"/>
-        </Frame>
-
-        </Frame>
+            
+            <!-- BOTON PARA GENERAR UN NUEVO SINIESTRO -->
+            
+            <Frame
+                Padding="20"
+                BorderColor="White">
+                <Frame Padding="200"
+                        WidthRequest="200" 
+                        HeightRequest="180"
+                        CornerRadius="10"
+                        HasShadow="True"
+                        BorderColor="Black"
+                        BackgroundColor="#EDEDED">
+                    <ImageButton Source="reportar.png"
+                                     x:Name="btn_reportar"
+                                 WidthRequest="100"
+                                 HeightRequest="100"
+                                 Aspect="AspectFit"
+                                 Clicked="btn_reportar_Clicked"/>
+                </Frame>
+            </Frame>
             <Label x:Name="lbl_reportar"
                 Text="REPORTAR SINIESTRO"
                    HorizontalTextAlignment="Center"
@@ -51,25 +53,58 @@
                    FontFamily="bold"
                    FontSize="Medium"            
                    TextColor="#2D2D2D"/>
+            
+            <!-- BOTON PARA TODOS LOS SINIESTROS -->
+            
+            <Frame
+                x:Name="frm_all_historial"
+                IsVisible="false"
+                Padding="20"
+                BorderColor="White">
+                <Frame Padding="50"
+                    WidthRequest="200" 
+                    HeightRequest="180"
+                    CornerRadius="10"
+                    HasShadow="True"
+                    BorderColor="Black"
+                    BackgroundColor="#EDEDED">
+                    <ImageButton Source="historial.png"
+                                 x:Name="btn_all_historial"
+                             WidthRequest="80"
+                             HeightRequest="80"
+                             Aspect="AspectFit"
+                             Clicked="btn_all_historial_Clicked"/>
+                </Frame>
+            </Frame>
+            <Label x:Name="lbl_all_historial"
+                   IsVisible="false"
+                   Text="VER TODOS REPORTES"
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold"
+                   FontFamily="bold"
+                   FontSize="Medium"            
+                   TextColor="#2D2D2D"/>
+        
+            <!-- BOTON PARA LOS SINIESTROS PROPIOS -->
+        
             <Frame
                 Padding="20"
                 BorderColor="White">
-                    <Frame Padding="50"
-                WidthRequest="200" 
-                HeightRequest="180"
-                CornerRadius="10"
-                HasShadow="True"
-                BorderColor="Black"
-                BackgroundColor="#EDEDED">
-                    <ImageButton Source="historial.png"
+                <Frame Padding="50"
+                    WidthRequest="200" 
+                    HeightRequest="180"
+                    CornerRadius="10"
+                    HasShadow="True"
+                    BorderColor="Black"
+                    BackgroundColor="#EDEDED">
+                        <ImageButton Source="historial.png"
                              x:Name="btn_historial"
-                         WidthRequest="80"
-                         HeightRequest="80"
-                         Aspect="AspectFit"
-                         Clicked="btn_historial_Clicked"/>
+                             WidthRequest="80"
+                             HeightRequest="80"
+                             Aspect="AspectFit"
+                             Clicked="btn_historial_Clicked"/>
+                </Frame>
             </Frame>
-         </Frame>
-
             <Label x:Name="lbl_historial"
                 Text="VER MIS REPORTES"
                 HorizontalTextAlignment="Center"
