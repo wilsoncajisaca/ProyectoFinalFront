@@ -6,20 +6,25 @@ namespace ProyectoFinal.Vistas;
 
 public partial class vReporteCliente : ContentPage
 {
-
     private static readonly HttpClient client = new HttpClient();
+    private Boolean isAllData = false;
 
-    public  vReporteCliente()
+    public vReporteCliente(Boolean isAllData)
     {
         InitializeComponent();
+        this.isAllData = isAllData;
         InitializeAsync();
     }
 
     private async Task InitializeAsync()
     {
+        CancellationTokenSource _cts = new CancellationTokenSource();
+        var loadingTask = loadingLocation(_cts.Token);
         await LoadSiniestrosAsync();
+        _cts.Cancel();
+        await loadingTask;
+        lblMessage.IsVisible = false;
     }
-
 
     private async Task LoadSiniestrosAsync()
     {
@@ -29,13 +34,16 @@ public partial class vReporteCliente : ContentPage
 
             if (string.IsNullOrEmpty(token))
             {
-                lblMessage.Text = "Token no encontrado. Por favor, inicia sesión nuevamente.";
-                // Navegar a la página de inicio de sesión u otra acción
-                return;
+                await DisplayAlert("Advertencia", "Por favor vuelve a iniciar sesion", "OK");
+                await Navigation.PushAsync(new VLogin());
             }
 
             string url = "https://96a0-190-123-34-107.ngrok-free.app/appMovilesFinal/api/sinister/getAllSinisterByPartner";
-
+            if (isAllData)
+            {
+                url = "https://96a0-190-123-34-107.ngrok-free.app/appMovilesFinal/api/sinister/getAllSinister";
+            }
+            
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             HttpResponseMessage response = await client.GetAsync(url);
 
@@ -71,6 +79,22 @@ public partial class vReporteCliente : ContentPage
         catch (Exception e)
         {
             lblMessage.Text = $"Se produjo un error: {e.Message}";
+        }
+    }
+
+    private async Task loadingLocation(CancellationToken token)
+    {
+        string loading = "Cargando";
+
+        while (!token.IsCancellationRequested)
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                if (token.IsCancellationRequested) break;
+
+                lblMessage.Text = loading + new string('.', i);
+                await Task.Delay(500);
+            }
         }
     }
 

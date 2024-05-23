@@ -1,6 +1,7 @@
 using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using Newtonsoft.Json;
+using ProyectoFinal.Models;
 using ProyectoFinal.Objetos;
 using System.Text;
 
@@ -40,7 +41,7 @@ public partial class vRegistro : ContentPage
         btnRegister.IsVisible = false;
         activityIndicator.IsVisible = true;
         activityIndicator.IsRunning = true;
-        var url = "https://96a0-190-123-34-107.ngrok-free.app/appMovilesFinal/api/partner/create";
+        var url = $"{Common.BaseUrl}/appMovilesFinal/api/partner/create";
         var userData = new
         {
             cedula = cedula.Trim(),

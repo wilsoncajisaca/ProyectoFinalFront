@@ -15,25 +15,16 @@ public partial class vReporteSiniestro : ContentPage
 	{
 		InitializeComponent();
         CargarTiposAsync();
-
     }
-
-   
 
     private async void btn_camra_Clicked(object sender, EventArgs e)
     {
-
-        // Código para mostrar la foto
         photo = await MediaPicker.CapturePhotoAsync();
         if (photo != null)
         {
-
-            // Muestra la foto en la interfaz
             var stream = await photo.OpenReadAsync();
             btn_camara.Source = ImageSource.FromStream(() => stream);
         }
-
-       
     }
     
     private async void btnUbicacion_Clicked(object sender, EventArgs e)
@@ -51,7 +42,6 @@ public partial class vReporteSiniestro : ContentPage
             _cts.Cancel();
             await loadingTask;
         }
-
     }
     private async Task loadingLocation(CancellationToken token)
     {
