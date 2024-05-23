@@ -83,7 +83,10 @@
                 <Grid>
                     <Button x:Name="btnLogin"
                                 Text="LOGIN"
-                                BackgroundColor="#4F3F9B"
+                                BackgroundColor="#4F3F9B" Opacity=".8"
+                                FontAttributes="Bold"
+                                FontFamily="bold"
+                                FontSize="Medium" 
                                 TextColor="White"
                                 HeightRequest="60"
                                 Clicked="btnLogin_Clicked"

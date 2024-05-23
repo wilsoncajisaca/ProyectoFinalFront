@@ -11,12 +11,14 @@
         <Grid BackgroundColor="#4F3F9B" Opacity=".9"/>
         
         <Grid ColumnDefinitions="150">
-            <Label Text="REPORTE DE SINIESTRO" 
+                    <Label Text="REPORTE DE SINIESTRO" 
+                    FontFamily="bold"
+                    FontSize="Medium" 
                     HorizontalOptions="Center"
                     VerticalOptions="Center"
                     TextColor="White"
-                    HorizontalTextAlignment="Center"
-                    FontSize="20"/>
+                    HorizontalTextAlignment="Center"/>
+                    
         </Grid>
    
     </Grid>
@@ -54,11 +56,23 @@
                 Text="Galeria"
                 Grid.Column="0"
                 Margin="30,0,30,0"
+                TextColor="White"
+                BackgroundColor="#4F3F9B" Opacity=".7"
+                FontAttributes="Bold"
+                FontFamily="bold"
+                FontSize="Medium" 
+                HeightRequest="60"
                 Clicked="btnGaleria_Clicked"/>
 
                 <Button x:Name="btnCamara"
                 Text="Tomar Foto"
+                BackgroundColor="#4F3F9B" Opacity=".7"
+                FontAttributes="Bold"
+                FontFamily="bold"
+                FontSize="Medium" 
+                HeightRequest="60"  
                 Grid.Column="1"
+                TextColor="White"
                 Margin="30,0,30,0"
                 Clicked="btn_camra_Clicked"/>
             </Grid>
@@ -68,6 +82,10 @@
                     <Button x:Name="btnUbicacion"
                     Text="Ubicación"
                     Grid.Row="1"
+                     BackgroundColor="#4F3F9B" Opacity=".7"
+                    FontAttributes="Bold"
+                    FontFamily="bold"
+                    FontSize="Medium" 
                     Margin="30,15,30,0"
                     Clicked="btnUbicacion_Clicked"/>
 
@@ -86,6 +104,9 @@
         TextColor="Black"    
         Grid.Row="0"
         Grid.Column="0"
+        FontAttributes="Bold"
+        FontFamily="bold"
+        FontSize="15" 
         HorizontalTextAlignment="Start"/>
 
             <Picker Grid.Column="1"
@@ -100,6 +121,8 @@
                Text="OBSERVACION:"
                Grid.Row="1"
                Grid.Column="0"
+               FontAttributes="Bold"
+               FontSize="15" 
                HorizontalTextAlignment="Start"/>
 
         </Grid>
@@ -120,9 +143,12 @@
                 <Grid  Grid.Row="1" 
                        Margin="30,10,30,0">
                     <Button x:Name="btnSiniestro"
-                            Text="REPORTAR SINIESTRO"
-                            BackgroundColor="#4F3F9B"
+                            Text="ENVIAR SINIESTRO"
+                            BackgroundColor="#4F3F9B" Opacity=".8"
                             TextColor="White"
+                            FontAttributes="Bold"
+                            FontFamily="bold"
+                            FontSize="Medium" 
                             HeightRequest="60"
                             Clicked="btnSiniestro_Clicked"
                             HorizontalOptions="FillAndExpand"
