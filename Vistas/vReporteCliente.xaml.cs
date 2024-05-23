@@ -8,6 +8,8 @@ public partial class vReporteCliente : ContentPage
 {
 
     private static readonly HttpClient client = new HttpClient();
+    private Siniestro siniestroSeleccionado;
+    private Siniestro siniestro;
 
     public  vReporteCliente()
     {
@@ -34,7 +36,9 @@ public partial class vReporteCliente : ContentPage
                 return;
             }
 
-            string url = "https://96a0-190-123-34-107.ngrok-free.app/appMovilesFinal/api/sinister/getAllSinisterByPartner";
+            
+
+            string url  = $"{Common.BaseUrl}/appMovilesFinal/api/sinister/getAllSinisterByPartner";
 
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             HttpResponseMessage response = await client.GetAsync(url);
@@ -90,7 +94,7 @@ public partial class vReporteCliente : ContentPage
 
         var selectedSiniestro = e.SelectedItem as Siniestro;
         // Manejar el elemento seleccionado
-        Navigation.PushAsync(new vDetalleReporte());
+        
 
         // Desmarcar el elemento seleccionado
         ((ListView)sender).SelectedItem = null;
@@ -101,7 +105,7 @@ public partial class vReporteCliente : ContentPage
         var selectedSiniestro = e.CurrentSelection.FirstOrDefault() as Siniestro;
         if (selectedSiniestro != null)
         {
-            await DisplayAlert("Seleccionado", $"Has seleccionado: {selectedSiniestro.TipoSiniestro}", "OK");
+            await Navigation.PushAsync(new vDetalleReporte(siniestro));
         }
     }
 
@@ -111,7 +115,8 @@ public partial class vReporteCliente : ContentPage
         var siniestro = frame.BindingContext as Siniestro;
         if (siniestro != null)
         {
-            await DisplayAlert("Seleccionado", $"Has seleccionado: {siniestro.TipoSiniestro}", "OK");
+
+            await Navigation.PushAsync(new vDetalleReporte(siniestro));
         }
     }
 }
