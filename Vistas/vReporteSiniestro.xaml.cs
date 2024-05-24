@@ -124,8 +124,6 @@ public partial class vReporteSiniestro : ContentPage
         {
             if (latitud.HasValue && longitud.HasValue)
             {
-
-                // Construir la URL de Google Maps con las coordenadas
                 string url = $"https://www.google.com/maps/search/?api=1&query={latitud},{longitud}";
 
                 // Abrir Google Maps
@@ -133,13 +131,11 @@ public partial class vReporteSiniestro : ContentPage
             }
             else
             {
-                // Coordenadas inválidas
                 await DisplayAlert("Error", "Invalid coordinates", "OK");
             }
         }
         catch (Exception ex)
         {
-            // Manejar errores
             await DisplayAlert("Error", $"An error occurred: {ex.Message}", "OK");
         }
     }
@@ -217,30 +213,26 @@ public partial class vReporteSiniestro : ContentPage
                     client.BaseAddress = new Uri(Common.BaseUrl);
                     string userToken = Preferences.Get("auth_token", string.Empty);
                     client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", userToken);
-
                    
-                    // Convertir la imagen a un formato adecuado para enviarla al servidor
+                    //Convierto la imagen
                     var content = new MultipartFormDataContent();
                     content.Add(new StreamContent(stream), "file", $"photo{extension}");
 
                     var selectedSinisterType = (TipoSiniestro)pkTipo.SelectedItem;
 
                     if (string.IsNullOrWhiteSpace(txtObservacion.Text)) 
-                        {
+                    {
                         await DisplayAlert("Alerta", "Ingrese la observación", "OK");
                         btnSiniestro.IsVisible = true;
                         return;
-                        }
+                    }
 
-                    // Agregar otros parámetros si es necesario
                     content.Add(new StringContent(txtObservacion.Text), "descripcion");
                     content.Add(new StringContent($"{latitud},{longitud}"), "ubicacionSiniestro");
                     content.Add(new StringContent(selectedSinisterType.SinisterTypeId), "tipoSiniestro");
 
-                    // Enviar la solicitud POST al servicio
                     var response = await client.PostAsync("/appMovilesFinal/api/sinister/createWithPhoto", content);
 
-                    // Verificar si la solicitud fue exitosa
                     if (response.IsSuccessStatusCode)
                     {
                         activityIndicator.IsVisible = false;

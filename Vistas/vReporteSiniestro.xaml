@@ -128,18 +128,18 @@
 
         </Grid>
 
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
 
-            <Frame BorderColor="Black"  Margin="10,0,10,0">
-            <Entry Grid.Row="0"
-                x:Name="txtObservacion"
-                Margin="0,0,0,0"
-                Placeholder="Escriba aqui"/>
-        </Frame>
+                <Frame BorderColor="Black"  Margin="10,0,10,0">
+                    <Entry Grid.Row="0"
+                            x:Name="txtObservacion"
+                            Margin="0,0,0,0"
+                            Placeholder="Escriba aqui"/>            
+                </Frame>
 
                 <Grid  Grid.Row="1" 
                        Margin="30,10,30,0">
@@ -161,13 +161,8 @@
                                        HorizontalOptions="Center"
                                        VerticalOptions="Center"/>
                 </Grid>
-
-
-
-
             </Grid>
-
-    </StackLayout>
+        </StackLayout>
 
     </ScrollView>
 

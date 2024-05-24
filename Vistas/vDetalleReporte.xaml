@@ -46,18 +46,26 @@
                         <ColumnDefinition Width="200"/>
                     </Grid.ColumnDefinitions>
                     <Label
-                         Text="Persona que Reporta:"
+                         Text="Reportado por:"
+                         FontSize="18"
                          Grid.Column="0"
+                         HorizontalTextAlignment="Start"
                          Margin="30,0,30,0"/>
                     <Label x:Name="lbl_nombre"
                          Grid.Column="1"
+                           FontSize="18"
+                           HorizontalTextAlignment="End"
                          Margin="30,0,30,0"/>
                 </Grid>
                 <Frame BorderColor="Black"
                        Margin="30"
                        Padding="10">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </Frame.GestureRecognizers>
                     <Label Grid.Row="1"
-                        x:Name="lbl_Ubicacion"/>
+                           HorizontalOptions="Center"
+                            x:Name="lbl_Ubicacion"/>
                 </Frame>
             </Grid>
 
@@ -72,21 +80,30 @@
                     <ColumnDefinition Width="200"/>
                 </Grid.ColumnDefinitions>
                 <Label Text="TIPO:"
-                     TextColor="Black"    
+                     TextColor="Black"  
+                     FontAttributes="Bold"
                      Grid.Row="0"
                      Grid.Column="0"
                      HorizontalTextAlignment="Start"/>
                 <Label x:Name="lbl_Tipo"
                         Grid.Column="1"
                         Grid.Row="0"
-                        HorizontalTextAlignment="Start"/>
+                        HorizontalTextAlignment="Center"/>
                 <Label 
                     Text="Estado:"
+                    FontAttributes="Bold"
                     Grid.Row="1"
                     Grid.Column="0"
                     HorizontalTextAlignment="Start"/>
                 <Label 
+                    Text="SOLICITADO"
+                    x:Name="lblStatus"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    HorizontalTextAlignment="Center"/>
+                <Label 
                     Text="Observaciones:"
+                    FontAttributes="Bold"
                     Grid.Row="2"
                     Grid.Column="0"
                     HorizontalTextAlignment="Start"/>
@@ -96,12 +113,57 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <Frame BorderColor="Black"  Margin="10,0,10,0">
+                <Frame BorderColor="Black" 
+                       Grid.Row="0"
+                       Margin="10,0,10,0">
                     <Label x:Name="lbl_Observacion"
                         Grid.Row="0"
                         Margin="0,0,0,0"/>
                 </Frame>
+                <Grid  Grid.Row="1" 
+                       Margin="30,10,30,0">
+                    <Button x:Name="btnAceptar"
+                            IsVisible="false"
+                            Text="ACEPTAR REPORTE"
+                            BackgroundColor="#4F3F9B" Opacity=".8"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontFamily="bold"
+                            FontSize="Medium" 
+                            HeightRequest="60"
+                            Clicked="btnAceptar_Clicked"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="CenterAndExpand"/>
+                    <ActivityIndicator x:Name="loadAceptar"
+                                       IsVisible="False"
+                                       IsRunning="False"
+                                       Color="#4F3F9B"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
+                </Grid>
+                <Grid Grid.Row="2" 
+                       Margin="30,10,30,0">
+                       <Button x:Name="btnAnular"
+                               IsVisible="false"
+                            Text="ANULAR REPORTE"
+                            BackgroundColor="Red" Opacity=".8"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontFamily="bold"
+                            FontSize="Medium" 
+                            HeightRequest="60"
+                            Clicked="btnAnular_Clicked"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="CenterAndExpand"/>
+                        <ActivityIndicator x:Name="loadAnular"
+                            IsVisible="False"
+                            IsRunning="False"
+                            Color="Red"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>  
+                </Grid>
             </Grid>
         </StackLayout>
     </ScrollView>

@@ -29,6 +29,8 @@ namespace ProyectoFinal.Models
 
         [JsonProperty("nombreUsuario")]
         public string NombreUsuario { get; set; }
+        [JsonProperty("estadoSolicitud")]
+        public string EstadoSolicitud { get; set; }
 
         [JsonProperty("colorFondo")]
         public string ColorFondo { get; set; }
